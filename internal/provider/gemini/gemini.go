@@ -139,13 +139,15 @@ Dada a busca abaixo, retorne SOMENTE um JSON valido (sem markdown, sem explicaco
 {
   "cnae": "<codigo CNAE de 7 digitos mais relevante>",
   "cnae_description": "<descricao oficial do CNAE>",
-  "search_terms": ["<termo 1 em portugues>", "<termo 2>", "<termo 3>"]
+  "search_terms": ["<termo 1 em portugues>", "<termo 2>", "<termo 3>"],
+  "use_foursquare": <true se o segmento e de bares/restaurantes/cafes/hoteis/academia/turismo, false caso contrario>
 }
 
 Regras:
 - "cnae" deve ser o codigo CNAE brasileiro (ex: "4781-4/00").
 - "search_terms" devem ser variacoes e sinonimos uteis para buscar esse tipo de negocio no DuckDuckGo.
 - Maximo 5 termos em "search_terms".
+- "use_foursquare" deve ser true SOMENTE para estabelecimentos do tipo POI (bares, restaurantes, lanchonetes, cafes, hoteis, pousadas, academias, parques, atracao turistica). Para lojas, escritorios, industrias: false.
 - Responda APENAS com o JSON, sem nenhum texto adicional.
 
 Busca: "%s"

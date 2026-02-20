@@ -12,6 +12,7 @@ import (
 
 	geminiprovider "github.com/lucasfdcampos/lead-finder/internal/provider/gemini"
 	cnpjprovider "github.com/lucasfdcampos/lead-finder/internal/provider/cnpj"
+	mapsprovider "github.com/lucasfdcampos/lead-finder/internal/provider/maps"
 	searchprovider "github.com/lucasfdcampos/lead-finder/internal/provider/search"
 	igprovider "github.com/lucasfdcampos/lead-finder/internal/provider/instagram"
 	waprovider "github.com/lucasfdcampos/lead-finder/internal/provider/whatsapp"
@@ -45,14 +46,17 @@ func main() {
 	ddg := searchprovider.New()
 	igProv := igprovider.New(ddg, geminiProv)
 	waProv := waprovider.New(ddg, geminiProv)
+	shadowScraper := mapsprovider.NewGoogleMapsShadowScraper(3)
 
 	// ── Wire use-case ─────────────────────────────────────────────────────
 	deps := usecase.Dependencies{
-		Enricher:          geminiProv,
-		CNPJPrimary:       brasilAPI,
-		CNPJFallback:      cnpjBiz,
-		InstagramSearcher: igProv,
-		WhatsAppSearcher:  waProv,
+		Enricher:           geminiProv,
+		CNPJPrimary:        brasilAPI,
+		CNPJFallback:       cnpjBiz,
+		BusinessDiscoverer: shadowScraper,
+		WebSearcher:        ddg,
+		InstagramSearcher:  igProv,
+		WhatsAppSearcher:   waProv,
 	}
 
 	uc := usecase.New(deps, logger)

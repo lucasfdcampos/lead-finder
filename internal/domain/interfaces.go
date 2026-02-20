@@ -45,3 +45,12 @@ type SearchResult struct {
 	URL     string
 	Snippet string
 }
+
+// BusinessDiscoverer discovers raw business names from web data sources
+// (e.g. Google Maps via DuckDuckGo shadow-scraping).
+type BusinessDiscoverer interface {
+	DiscoveryProvider
+	// DiscoverBusinessNames returns raw business name strings for the given
+	// query and location, potentially across multiple paginated requests.
+	DiscoverBusinessNames(ctx context.Context, query, location string) ([]string, error)
+}

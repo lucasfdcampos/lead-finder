@@ -54,4 +54,7 @@ type GeminiSearchContext struct {
 	CNAE            string   `json:"cnae"`
 	CNAEDescription string   `json:"cnae_description"`
 	SearchTerms     []string `json:"search_terms"`
+	// UseFoursquare signals the pipeline to also query Foursquare-like APIs
+	// (true for bars, restaurants, cafés, hotels and similar POI categories).
+	UseFoursquare bool `json:"use_foursquare"`
 }

@@ -10,18 +10,19 @@ import (
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/joho/godotenv"
 
-	geminiprovider "github.com/lucasfdcampos/lead-finder/internal/provider/gemini"
+	"github.com/lucasfdcampos/lead-finder/internal/handler"
 	cnpjprovider "github.com/lucasfdcampos/lead-finder/internal/provider/cnpj"
+	fsqprovider "github.com/lucasfdcampos/lead-finder/internal/provider/foursquare"
+	geminiprovider "github.com/lucasfdcampos/lead-finder/internal/provider/gemini"
+	geoprovider "github.com/lucasfdcampos/lead-finder/internal/provider/geocoder"
+	igprovider "github.com/lucasfdcampos/lead-finder/internal/provider/instagram"
 	mapsprovider "github.com/lucasfdcampos/lead-finder/internal/provider/maps"
 	searchprovider "github.com/lucasfdcampos/lead-finder/internal/provider/search"
-	igprovider "github.com/lucasfdcampos/lead-finder/internal/provider/instagram"
 	waprovider "github.com/lucasfdcampos/lead-finder/internal/provider/whatsapp"
 	"github.com/lucasfdcampos/lead-finder/internal/usecase"
-	"github.com/lucasfdcampos/lead-finder/internal/handler"
 )
 
 func main() {
-	// Load .env (ignore error if file doesn't exist — rely on real env vars in production)
 	_ = godotenv.Load()
 
 	logger := slog.New(slog.NewJSONHandler(os.Stdout, &slog.HandlerOptions{
@@ -29,11 +30,14 @@ func main() {
 	}))
 	slog.SetDefault(logger)
 
-	// ── Configuration ─────────────────────────────────────────────────────
-	geminiKey := mustEnv("GEMINI_API_KEY")
-	port := envOrDefault("PORT", "8080")
+	// ── Configuration ─────────────────────────────────────────────────────────
+	geminiKey   := mustEnv("GEMINI_API_KEY")
+	port        := envOrDefault("PORT", "8080")
+	bingKey     := os.Getenv("BING_API_KEY")
+	fsqKey      := os.Getenv("FOURSQUARE_API_KEY")
+	liqKey      := os.Getenv("LOCATIONIQ_API_KEY")
 
-	// ── Wire providers ────────────────────────────────────────────────────
+	// ── Providers ─────────────────────────────────────────────────────────────
 	geminiProv, err := geminiprovider.New(geminiKey)
 	if err != nil {
 		logger.Error("failed to initialize Gemini provider", "err", err)
@@ -41,27 +45,49 @@ func main() {
 	}
 	defer geminiProv.Close()
 
-	brasilAPI := cnpjprovider.NewBrasilAPI()
-	cnpjBiz := cnpjprovider.NewCNPJBiz()
-	ddg := searchprovider.New()
-	igProv := igprovider.New(ddg, geminiProv)
-	waProv := waprovider.New(ddg, geminiProv)
+	brasilAPI     := cnpjprovider.NewBrasilAPI()
+	cnpjBiz       := cnpjprovider.NewCNPJBiz()
+	ddg           := searchprovider.New()
+	igProv        := igprovider.New(ddg, geminiProv)
+	waProv        := waprovider.New(ddg, geminiProv)
 	shadowScraper := mapsprovider.NewGoogleMapsShadowScraper(3)
 
-	// ── Wire use-case ─────────────────────────────────────────────────────
+	// Optional providers (require API keys)
+	var bingProv      *searchprovider.BingProvider
+	if bingKey != "" {
+		bingProv = searchprovider.NewBing(bingKey)
+		logger.Info("bing search enabled")
+	}
+
+	var fsqProv *fsqprovider.Provider
+	if fsqKey != "" {
+		fsqProv = fsqprovider.New(fsqKey)
+		logger.Info("foursquare enabled")
+	}
+
+	var geoProv *geoprovider.Adapter
+	if liqKey != "" {
+		geoProv = geoprovider.NewAdapter(liqKey)
+		logger.Info("locationiq geocoder enabled")
+	}
+
+	// ── Use-case wiring ───────────────────────────────────────────────────────
 	deps := usecase.Dependencies{
-		Enricher:           geminiProv,
-		CNPJPrimary:        brasilAPI,
-		CNPJFallback:       cnpjBiz,
-		BusinessDiscoverer: shadowScraper,
-		WebSearcher:        ddg,
-		InstagramSearcher:  igProv,
-		WhatsAppSearcher:   waProv,
+		Enricher:            geminiProv,
+		Geocoder:            geoProv,     // nil-safe: skipped when key absent
+		BusinessDiscoverer:  shadowScraper,
+		PlacesSearcher:      fsqProv,     // nil-safe: skipped when UseFoursquare=false or key absent
+		WebSearcher:         ddg,
+		WebSearcherFallback: bingProv,    // nil-safe
+		CNPJPrimary:         brasilAPI,
+		CNPJFallback:        cnpjBiz,
+		InstagramSearcher:   igProv,
+		WhatsAppSearcher:    waProv,
 	}
 
 	uc := usecase.New(deps, logger)
 
-	// ── Wire HTTP ─────────────────────────────────────────────────────────
+	// ── HTTP ──────────────────────────────────────────────────────────────────
 	leadHandler := handler.NewLeadHandler(uc)
 
 	r := chi.NewRouter()

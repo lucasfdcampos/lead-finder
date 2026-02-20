@@ -1,15 +1,13 @@
 // Package usecase orchestrates the full lead-generation pipeline.
 //
 // Pipeline (in order):
-//   1. Gemini      — enriches the query: returns CNAE, UseFoursquare flag, search terms
-//   2. Discovery   — GoogleMapsShadowScraper pages through DDG results to harvest
-//                    real business names from Google Maps organic listings
-//   3. Dedup       — normalizes names (lowercase + no accents + sorted word-bag)
-//                    to merge duplicates like "Padaria Silva" / "Silva Padaria Ltda"
-//   4. CNPJ enrich — for each unique name: DDG search → extract CNPJ →
-//                    BrasilAPI (JSON, fast) → CNPJBiz (scraper, fallback)
-//   5. Social      — Instagram (heuristics + scraper) + WhatsApp (regex + Gemini)
-//                    run concurrently per lead
+//  1. Gemini      — enriches query: returns CNAE, UseFoursquare flag, search terms
+//  2. Geocode     — LocationIQ converts location string → lat/lon
+//  3. Discovery   — GoogleMapsShadowScraper (DDG→Google Maps) harvests business names
+//  4. Foursquare  — ONLY when UseFoursquare=true: POI search around geocoded lat/lon
+//  5. Dedup       — normalizes names (lowercase + no accents + sorted word-bag)
+//  6. CNPJ enrich — DDG/Bing → extract CNPJ → BrasilAPI → CNPJBiz
+//  7. Social      — Instagram (bio-confirmed) + WhatsApp, concurrently per lead
 package usecase
 
 import (
@@ -27,22 +25,33 @@ import (
 )
 
 const (
-	timeoutEnrich       = 15 * time.Second
-	timeoutDiscover     = 45 * time.Second // up to 3 paginated DDG pages
-	timeoutCNPJList     = 20 * time.Second
-	timeoutCNPJFetch    = 10 * time.Second
-	timeoutCNPJByName   = 10 * time.Second // DDG search to find CNPJ for a name
-	timeoutSocial       = 15 * time.Second
+	timeoutEnrich      = 15 * time.Second
+	timeoutGeocode     = 8 * time.Second
+	timeoutDiscover    = 45 * time.Second
+	timeoutFoursquare  = 15 * time.Second
+	timeoutCNPJList    = 20 * time.Second
+	timeoutCNPJFetch   = 10 * time.Second
+	timeoutCNPJByName  = 10 * time.Second
+	timeoutSocial      = 15 * time.Second
 	maxCNPJsToEnrich   = 20
-	cnpjEnrichWorkers  = 5 // max concurrent CNPJ-by-name DDG searches
+	cnpjEnrichWorkers  = 5
+	fsqDefaultRadius   = 5000 // metres
 )
 
+// igWithHints is a narrow extension used inside the use-case to pass bio hints.
+type igWithHints interface {
+	domain.InstagramSearcher
+	ValidateProfileWithHints(ctx context.Context, handle, city, phone string) (int, bool, error)
+}
+
 // Dependencies holds all provider interfaces the use-case depends on.
-// BusinessDiscoverer and WebSearcher are optional — set to nil to skip those phases.
 type Dependencies struct {
 	Enricher           domain.QueryEnricher
-	BusinessDiscoverer domain.BusinessDiscoverer // GoogleMapsShadowScraper; optional
-	WebSearcher        domain.WebSearcher        // DDG; used for CNPJ-by-name lookups
+	Geocoder           domain.Geocoder           // LocationIQ; optional
+	BusinessDiscoverer domain.BusinessDiscoverer  // GoogleMapsShadowScraper; optional
+	PlacesSearcher     domain.PlacesSearcher     // Foursquare; optional, used when UseFoursquare=true
+	WebSearcher        domain.WebSearcher        // DDG primary
+	WebSearcherFallback domain.WebSearcher       // Bing fallback; optional
 	CNPJPrimary        domain.CNPJSearcher       // BrasilAPI
 	CNPJFallback       domain.CNPJSearcher       // CNPJBiz
 	InstagramSearcher  domain.InstagramSearcher
@@ -83,7 +92,21 @@ func (uc *LeadDiscoveryUseCase) Execute(ctx context.Context, req domain.SearchRe
 
 	city, state := parseLocation(req.Location)
 
-	// ── Phase 2: Discovery — Google Maps shadow scraper ───────────────────────
+	// ── Phase 2: Geocode location ─────────────────────────────────────────────
+	var latlon string
+	if uc.deps.Geocoder != nil {
+		geoCtx, geoCancel := context.WithTimeout(ctx, timeoutGeocode)
+		latlon, err = uc.deps.Geocoder.Geocode(geoCtx, req.Location)
+		geoCancel()
+		if err != nil {
+			uc.logger.Warn("geocode failed", "location", req.Location, "err", err)
+			latlon = ""
+		} else {
+			uc.logger.Info("geocoded", "location", req.Location, "latlon", latlon)
+		}
+	}
+
+	// ── Phase 3: Discovery — Google Maps shadow scraper ───────────────────────
 	var rawNames []string
 	if uc.deps.BusinessDiscoverer != nil {
 		discoverCtx, discoverCancel := context.WithTimeout(ctx, timeoutDiscover)
@@ -97,32 +120,61 @@ func (uc *LeadDiscoveryUseCase) Execute(ctx context.Context, req domain.SearchRe
 		uc.logger.Info("discovery done", "raw_names", len(rawNames))
 	}
 
-	// ── Phase 3: Deduplication ────────────────────────────────────────────────
-	uniqueNames := deduplicateNames(rawNames)
-	uc.logger.Info("deduplication done", "unique_names", len(uniqueNames))
-
-	// ── Phase 4: Build partial leads + CNPJ enrichment ───────────────────────
-	var partialLeads []domain.Lead
-
-	if len(uniqueNames) > 0 {
-		// Seed one lead per discovered name.
-		for _, name := range uniqueNames {
-			partialLeads = append(partialLeads, domain.Lead{
-				Name:     name,
-				CNAE:     searchCtx.CNAE,
-				CNAEDesc: searchCtx.CNAEDescription,
-				Address:  domain.Address{City: city, State: state},
-				Source:   []string{"googlemaps-shadow"},
-			})
-		}
-
-		// Enrich each name-lead with its CNPJ (concurrent DDG lookups).
-		if req.SearchCNPJ {
-			partialLeads = uc.enrichLeadsWithCNPJByName(ctx, partialLeads, city, state)
+	// ── Phase 4: Foursquare (POI queries only) ────────────────────────────────
+	var fsqLeads []domain.Lead
+	if searchCtx.UseFoursquare && uc.deps.PlacesSearcher != nil {
+		fsqCtx, fsqCancel := context.WithTimeout(ctx, timeoutFoursquare)
+		fsqLeads, err = uc.deps.PlacesSearcher.SearchPlaces(fsqCtx, req.Query, latlon, fsqDefaultRadius)
+		fsqCancel()
+		if err != nil {
+			uc.logger.Warn("foursquare search failed", "err", err)
+		} else {
+			uc.logger.Info("foursquare done", "results", len(fsqLeads))
+			// Collect FSQ names for deduplication
+			for _, l := range fsqLeads {
+				rawNames = append(rawNames, l.Name)
+			}
 		}
 	}
 
-	// Fallback: CNAE-based CNPJ list when shadow scraper found nothing.
+	// ── Phase 5: Deduplication ────────────────────────────────────────────────
+	uniqueNames := deduplicateNames(rawNames)
+	uc.logger.Info("deduplication done", "unique_names", len(uniqueNames))
+
+	// ── Phase 6: Build partial leads + CNPJ enrichment ───────────────────────
+	var partialLeads []domain.Lead
+
+	// Seed from Foursquare results first (they already have address/phone)
+	fsqSeen := make(map[string]bool)
+	for _, l := range fsqLeads {
+		key := normalizeForDedup(l.Name)
+		if key != "" && !fsqSeen[key] {
+			fsqSeen[key] = true
+			l.CNAE = searchCtx.CNAE
+			l.CNAEDesc = searchCtx.CNAEDescription
+			partialLeads = append(partialLeads, l)
+		}
+	}
+
+	// Seed shadow-scraper names that are not already in the FSQ set
+	for _, name := range uniqueNames {
+		if fsqSeen[normalizeForDedup(name)] {
+			continue
+		}
+		partialLeads = append(partialLeads, domain.Lead{
+			Name:     name,
+			CNAE:     searchCtx.CNAE,
+			CNAEDesc: searchCtx.CNAEDescription,
+			Address:  domain.Address{City: city, State: state},
+			Source:   []string{"googlemaps-shadow"},
+		})
+	}
+
+	if req.SearchCNPJ && len(partialLeads) > 0 {
+		partialLeads = uc.enrichLeadsWithCNPJByName(ctx, partialLeads, city, state)
+	}
+
+	// Fallback: CNAE-based CNPJ list when no leads found yet
 	if len(partialLeads) == 0 && req.SearchCNPJ {
 		cnpjList, listErr := uc.fetchCNPJList(ctx, searchCtx.CNAE, city, state)
 		if listErr != nil {
@@ -132,7 +184,7 @@ func (uc *LeadDiscoveryUseCase) Execute(ctx context.Context, req domain.SearchRe
 		}
 	}
 
-	// Last resort: synthetic lead so the response is never empty.
+	// Last resort: synthetic lead so the response is never empty
 	if len(partialLeads) == 0 {
 		partialLeads = []domain.Lead{{
 			Name:     req.Query,
@@ -143,17 +195,29 @@ func (uc *LeadDiscoveryUseCase) Execute(ctx context.Context, req domain.SearchRe
 		}}
 	}
 
-	// ── Phase 5: Social enrichment (Instagram + WhatsApp) ────────────────────
+	// ── Phase 7: Social enrichment ────────────────────────────────────────────
 	finalLeads := uc.enrichSocial(ctx, partialLeads, req)
 
 	uc.logger.Info("pipeline finished", "total_leads", len(finalLeads))
 	return finalLeads, nil
 }
 
-// ─── Phase 4 helpers ──────────────────────────────────────────────────────────
+// ─── Web search with Bing fallback ───────────────────────────────────────────
 
-// enrichLeadsWithCNPJByName fans out CNPJ-by-name lookups concurrently
-// (capped at cnpjEnrichWorkers goroutines) and merges the results.
+func (uc *LeadDiscoveryUseCase) webSearch(ctx context.Context, query string) ([]domain.SearchResult, error) {
+	results, err := uc.deps.WebSearcher.Search(ctx, query)
+	if err == nil && len(results) > 0 {
+		return results, nil
+	}
+	if uc.deps.WebSearcherFallback != nil {
+		uc.logger.Debug("primary web search failed, trying bing", "query", query, "err", err)
+		return uc.deps.WebSearcherFallback.Search(ctx, query)
+	}
+	return nil, err
+}
+
+// ─── Phase 6 helpers ──────────────────────────────────────────────────────────
+
 func (uc *LeadDiscoveryUseCase) enrichLeadsWithCNPJByName(ctx context.Context, leads []domain.Lead, city, state string) []domain.Lead {
 	if len(leads) > maxCNPJsToEnrich {
 		leads = leads[:maxCNPJsToEnrich]
@@ -172,45 +236,35 @@ func (uc *LeadDiscoveryUseCase) enrichLeadsWithCNPJByName(ctx context.Context, l
 			result[idx] = uc.enrichSingleLeadWithCNPJ(ctx, l, city, state)
 		}(i, lead)
 	}
-
 	wg.Wait()
 	return result
 }
 
-// enrichSingleLeadWithCNPJ searches DDG for a CNPJ, then fetches full company data.
 func (uc *LeadDiscoveryUseCase) enrichSingleLeadWithCNPJ(ctx context.Context, lead domain.Lead, city, state string) domain.Lead {
 	cnpj := uc.findCNPJByName(ctx, lead.Name, city, state)
 	if cnpj == "" {
-		return lead // keep name-only lead
+		return lead
 	}
 
 	fullLead, err := uc.fetchSingleCNPJ(ctx, cnpj)
 	if err != nil {
 		uc.logger.Warn("cnpj fetch failed for discovered name",
 			"name", lead.Name, "cnpj", cnpj, "err", err)
-		// Partial enrichment: at least store the raw CNPJ.
 		lead.CNPJ = sanitizeCNPJDigits(cnpj)
 		return lead
 	}
-
-	// Preserve the Google Maps discovery source alongside the CNPJ source.
 	fullLead.Source = appendUnique(fullLead.Source, "googlemaps-shadow")
 	return *fullLead
 }
 
 var reCNPJInText = regexp.MustCompile(`[0-9]{2}\.[0-9]{3}\.[0-9]{3}/[0-9]{4}-[0-9]{2}`)
 
-// findCNPJByName uses DuckDuckGo to search for a CNPJ associated with a business name.
 func (uc *LeadDiscoveryUseCase) findCNPJByName(ctx context.Context, name, city, state string) string {
-	if uc.deps.WebSearcher == nil {
-		return ""
-	}
-
 	findCtx, cancel := context.WithTimeout(ctx, timeoutCNPJByName)
 	defer cancel()
 
 	query := fmt.Sprintf(`"%s" CNPJ %s %s`, name, city, state)
-	results, err := uc.deps.WebSearcher.Search(findCtx, query)
+	results, err := uc.webSearch(findCtx, query)
 	if err != nil {
 		return ""
 	}
@@ -227,8 +281,6 @@ func (uc *LeadDiscoveryUseCase) findCNPJByName(ctx context.Context, name, city, 
 func sanitizeCNPJDigits(cnpj string) string {
 	return regexp.MustCompile(`\D`).ReplaceAllString(cnpj, "")
 }
-
-// ─── Phase 2 helpers (CNAE-based fallback) ────────────────────────────────────
 
 func (uc *LeadDiscoveryUseCase) fetchCNPJList(ctx context.Context, cnae, city, state string) ([]domain.Lead, error) {
 	listCtx, cancel := context.WithTimeout(ctx, timeoutCNPJList)
@@ -253,13 +305,11 @@ func (uc *LeadDiscoveryUseCase) enrichLeads(ctx context.Context, partials []doma
 	if !doCNPJ {
 		return partials
 	}
-
 	cap := len(partials)
 	if cap > maxCNPJsToEnrich {
 		cap = maxCNPJsToEnrich
 	}
 	enriched := make([]domain.Lead, 0, cap)
-
 	for i, partial := range partials {
 		if i >= maxCNPJsToEnrich {
 			break
@@ -290,7 +340,6 @@ func (uc *LeadDiscoveryUseCase) fetchSingleCNPJ(ctx context.Context, cnpj string
 	if !errors.Is(err, domain.ErrNotFound) && !errors.Is(err, domain.ErrRateLimited) {
 		uc.logger.Warn("brasilapi fetch failed, trying cnpjbiz", "cnpj", cnpj, "err", err)
 	}
-
 	lead, err = uc.deps.CNPJFallback.FetchByCNPJ(fetchCtx, cnpj)
 	if err != nil {
 		return nil, fmt.Errorf("both providers failed for CNPJ %s: %w", cnpj, err)
@@ -298,7 +347,7 @@ func (uc *LeadDiscoveryUseCase) fetchSingleCNPJ(ctx context.Context, cnpj string
 	return lead, nil
 }
 
-// ─── Phase 5: Social enrichment ───────────────────────────────────────────────
+// ─── Phase 7: Social enrichment ───────────────────────────────────────────────
 
 func (uc *LeadDiscoveryUseCase) enrichSocial(ctx context.Context, leads []domain.Lead, req domain.SearchRequest) []domain.Lead {
 	result := make([]domain.Lead, len(leads))
@@ -339,9 +388,18 @@ func (uc *LeadDiscoveryUseCase) enrichSingleLeadSocial(ctx context.Context, lead
 				igCh <- igResult{}
 				return
 			}
-			followers, _, err := uc.deps.InstagramSearcher.ValidateProfile(socialCtx, handle)
-			if err != nil {
+			// Use bio hints when available for higher-confidence validation
+			var followers int
+			var ok bool
+			if igH, canHint := uc.deps.InstagramSearcher.(igWithHints); canHint {
+				followers, ok, err = igH.ValidateProfileWithHints(socialCtx, handle, lead.Address.City, lead.Phone)
+			} else {
+				followers, ok, err = uc.deps.InstagramSearcher.ValidateProfile(socialCtx, handle)
+			}
+			if err != nil || !ok {
 				uc.logger.Debug("instagram validate failed", "handle", handle, "err", err)
+				igCh <- igResult{}
+				return
 			}
 			igCh <- igResult{handle: handle, followers: followers}
 		}()
@@ -386,15 +444,9 @@ func (uc *LeadDiscoveryUseCase) enrichSingleLeadSocial(ctx context.Context, lead
 // ─── Deduplication ────────────────────────────────────────────────────────────
 
 var (
-	// reLegalDedup removes common Brazilian legal-form tokens from a name before
-	// comparing, so "Padaria Silva Ltda" and "Padaria Silva" collapse to the same key.
 	reLegalDedup = regexp.MustCompile(`(?i)\b(ltda|eireli|epp|me|s/?a\.?|cia|companhia|grupo)\b\.?`)
-
-	// reNonWordDedup splits a normalized string into word tokens.
 	reNonWordDedup = regexp.MustCompile(`[^a-z0-9]+`)
-
-	// reAccentDedup replaces Portuguese-accented characters with their ASCII equivalents.
-	reAccentDedup = strings.NewReplacer(
+	reAccentDedup  = strings.NewReplacer(
 		"a\u0301", "a", "a\u0300", "a", "\u00e1", "a", "\u00e0", "a", "\u00e2", "a", "\u00e3", "a",
 		"\u00e9", "e", "\u00ea", "e",
 		"\u00ed", "i", "\u00ee", "i",
@@ -404,9 +456,6 @@ var (
 	)
 )
 
-// deduplicateNames returns a new slice with duplicate business names removed.
-// Two names are considered duplicates when their normalizeForDedup keys match.
-// Example: "Padaria Silva" and "Silva Padaria Ltda" → same key → first one wins.
 func deduplicateNames(names []string) []string {
 	seen := make(map[string]bool)
 	var out []string
@@ -423,17 +472,10 @@ func deduplicateNames(names []string) []string {
 	return out
 }
 
-// normalizeForDedup produces a canonical sort-key for a business name:
-//  1. Lowercase + remove accents
-//  2. Strip legal suffixes (Ltda, S/A, Eireli, …)
-//  3. Tokenize → sort words alphabetically → join with "|"
-//
-// Sorting the words makes "Padaria Silva" and "Silva Padaria" identical.
 func normalizeForDedup(name string) string {
 	s := strings.ToLower(strings.TrimSpace(name))
 	s = reAccentDedup.Replace(s)
 	s = reLegalDedup.ReplaceAllString(s, " ")
-
 	words := reNonWordDedup.Split(s, -1)
 	var clean []string
 	for _, w := range words {
@@ -447,7 +489,6 @@ func normalizeForDedup(name string) string {
 
 // ─── Utilities ────────────────────────────────────────────────────────────────
 
-// parseLocation splits "Arapongas-PR" into ("Arapongas", "PR").
 func parseLocation(location string) (city, state string) {
 	parts := strings.SplitN(location, "-", 2)
 	city = strings.TrimSpace(parts[0])

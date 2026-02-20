@@ -25,6 +25,8 @@ type InstagramSearcher interface {
 	DiscoveryProvider
 	FindHandle(ctx context.Context, businessName, location string) (string, error)
 	ValidateProfile(ctx context.Context, handle string) (followers int, ok bool, err error)
+	// ValidateProfileWithHints validates and confirms the profile using city/phone bio hints.
+	ValidateProfileWithHints(ctx context.Context, handle, city, phone string) (followers int, ok bool, err error)
 }
 
 // WhatsAppSearcher finds WhatsApp numbers for a business.
@@ -53,4 +55,19 @@ type BusinessDiscoverer interface {
 	// DiscoverBusinessNames returns raw business name strings for the given
 	// query and location, potentially across multiple paginated requests.
 	DiscoverBusinessNames(ctx context.Context, query, location string) ([]string, error)
+}
+
+// PlacesSearcher queries a POI database (e.g. Foursquare) for venue leads.
+// It is only invoked when Gemini sets UseFoursquare=true for the query.
+type PlacesSearcher interface {
+	DiscoveryProvider
+	// SearchPlaces returns business leads for a query around a lat/lon coordinate.
+	// radiusM is the search radius in metres; 0 lets the provider choose a default.
+	SearchPlaces(ctx context.Context, query, latlon string, radiusM int) ([]Lead, error)
+}
+
+// Geocoder converts a human-readable location string into lat/lon coordinates.
+type Geocoder interface {
+	DiscoveryProvider
+	Geocode(ctx context.Context, location string) (latlon string, err error)
 }

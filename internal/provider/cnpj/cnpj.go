@@ -157,22 +157,22 @@ func (p *CNPJBizProvider) SearchByCNAE(ctx context.Context, cnae, city, state st
 }
 
 type brasilAPICompany struct {
-	CNPJ                string           `json:"cnpj"`
-	RazaoSocial         string           `json:"razao_social"`
-	NomeFantasia        string           `json:"nome_fantasia"`
-	DataAbertura        string           `json:"data_inicio_atividade"`
-	CNAEFiscalDescricao string           `json:"cnae_fiscal_descricao"`
-	CNAEFiscal          int              `json:"cnae_fiscal"`
-	Logradouro          string           `json:"logradouro"`
-	Numero              string           `json:"numero"`
-	Complemento         string           `json:"complemento"`
-	Bairro              string           `json:"bairro"`
-	Municipio           string           `json:"municipio"`
-	UF                  string           `json:"uf"`
-	CEP                 string           `json:"cep"`
-	Telefone1           string           `json:"ddd_telefone_1"`
-	Telefone2           string           `json:"ddd_telefone_2"`
-	Email               string           `json:"email"`
+	CNPJ                string             `json:"cnpj"`
+	RazaoSocial         string             `json:"razao_social"`
+	NomeFantasia        string             `json:"nome_fantasia"`
+	DataAbertura        string             `json:"data_inicio_atividade"`
+	CNAEFiscalDescricao string             `json:"cnae_fiscal_descricao"`
+	CNAEFiscal          int                `json:"cnae_fiscal"`
+	Logradouro          string             `json:"logradouro"`
+	Numero              string             `json:"numero"`
+	Complemento         string             `json:"complemento"`
+	Bairro              string             `json:"bairro"`
+	Municipio           string             `json:"municipio"`
+	UF                  string             `json:"uf"`
+	CEP                 string             `json:"cep"`
+	Telefone1           string             `json:"ddd_telefone_1"`
+	Telefone2           string             `json:"ddd_telefone_2"`
+	Email               string             `json:"email"`
 	QSA                 []brasilAPIPartner `json:"qsa"`
 }
 

@@ -1,4 +1,4 @@
-// Package whatsapp finds WhatsApp numbers for a business via DuckDuckGo + Gemini.
+// Package whatsapp finds WhatsApp numbers for a business via DuckDuckGo.
 package whatsapp
 
 import (
@@ -10,45 +10,27 @@ import (
 	"github.com/lucasfdcampos/lead-finder/internal/domain"
 )
 
-// GeminiExtractor is a narrow interface to avoid importing the full gemini package.
-type GeminiExtractor interface {
-	ExtractWhatsAppNumber(ctx context.Context, businessName string, snippets []string) (string, error)
-}
-
 // Provider implements domain.WhatsAppSearcher.
 type Provider struct {
 	searcher domain.WebSearcher
-	gemini   GeminiExtractor
 }
 
 // New creates a new WhatsApp Provider.
-func New(searcher domain.WebSearcher, gemini GeminiExtractor) *Provider {
-	return &Provider{
-		searcher: searcher,
-		gemini:   gemini,
-	}
+func New(searcher domain.WebSearcher) *Provider {
+	return &Provider{searcher: searcher}
 }
 
 func (p *Provider) Name() string { return "whatsapp" }
 
-// FindNumber tries to find a WhatsApp number for the given business.
+// FindNumber tries to find a WhatsApp number for the given business via DuckDuckGo.
 func (p *Provider) FindNumber(ctx context.Context, businessName, location string) (string, error) {
 	query := fmt.Sprintf(`"%s" whatsapp %s`, businessName, location)
 	results, err := p.searcher.Search(ctx, query)
 	if err == nil && len(results) > 0 {
-		snippets := make([]string, 0, len(results))
 		for _, r := range results {
 			text := r.Snippet + " " + r.Title + " " + r.URL
-			snippets = append(snippets, text)
 			if num := extractBrazilianPhone(text); num != "" {
 				return num, nil
-			}
-		}
-
-		if p.gemini != nil {
-			num, err := p.gemini.ExtractWhatsAppNumber(ctx, businessName, snippets)
-			if err == nil && num != "" && num != "NOT_FOUND" {
-				return sanitizeNumber(num), nil
 			}
 		}
 	}

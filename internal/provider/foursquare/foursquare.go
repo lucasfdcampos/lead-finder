@@ -47,6 +47,7 @@ func (p *Provider) SearchPlaces(ctx context.Context, query, latlon string, radiu
 	params := url.Values{}
 	params.Set("query", query)
 	params.Set("limit", strconv.Itoa(fsqMaxLimit))
+	params.Set("fields", "fsq_id,name,location,categories,geocodes,website,tel")
 	if radiusM > 0 {
 		params.Set("radius", strconv.Itoa(radiusM))
 	}
@@ -61,6 +62,7 @@ func (p *Provider) SearchPlaces(ctx context.Context, query, latlon string, radiu
 	}
 	req.Header.Set("Authorization", p.apiKey)
 	req.Header.Set("Accept", "application/json")
+	req.Header.Set("X-Places-Api-Version", "1970-01-01")
 
 	resp, err := p.client.Do(req)
 	if err != nil {
@@ -103,13 +105,13 @@ type fsqResponse struct {
 }
 
 type fsqPlace struct {
-	FSQID      string         `json:"fsq_id"`
-	Name       string         `json:"name"`
-	Categories []fsqCategory  `json:"categories"`
-	Location   fsqLocation    `json:"location"`
-	Geocode    fsqGeocode     `json:"geocodes"`
-	Website    string         `json:"website"`
-	Tel        string         `json:"tel"`
+	FSQID      string        `json:"fsq_id"`
+	Name       string        `json:"name"`
+	Categories []fsqCategory `json:"categories"`
+	Location   fsqLocation   `json:"location"`
+	Geocode    fsqGeocode    `json:"geocodes"`
+	Website    string        `json:"website"`
+	Tel        string        `json:"tel"`
 }
 
 type fsqCategory struct {
@@ -117,13 +119,13 @@ type fsqCategory struct {
 }
 
 type fsqLocation struct {
-	Address      string   `json:"address"`
-	CrossStreet  string   `json:"cross_street"`
-	Locality     string   `json:"locality"`
-	Region       string   `json:"region"`
-	Postcode     string   `json:"postcode"`
-	Country      string   `json:"country"`
-	FormattedAdr string   `json:"formatted_address"`
+	Address      string `json:"address"`
+	CrossStreet  string `json:"cross_street"`
+	Locality     string `json:"locality"`
+	Region       string `json:"region"`
+	Postcode     string `json:"postcode"`
+	Country      string `json:"country"`
+	FormattedAdr string `json:"formatted_address"`
 }
 
 type fsqGeocode struct {
@@ -141,14 +143,31 @@ func (p *fsqPlace) toLead() domain.Lead {
 		cats = append(cats, c.Name)
 	}
 
+	phone := sanitizePhone(p.Tel)
+
+	// Detect WhatsApp: Brazilian mobile format = 55 + DDD(2) + 9XXXXXXXX(9) = 13 digits,
+	// or without country code: DDD(2) + 9XXXXXXXX(9) = 11 digits.
+	var whatsapp string
+	if phone != "" {
+		digits := phone
+		// Strip leading country code "55" if present and result is 11 digits
+		if strings.HasPrefix(digits, "55") && len(digits) == 13 {
+			digits = digits[2:]
+		}
+		if len(digits) == 11 {
+			whatsapp = "55" + digits
+		}
+	}
+
 	return domain.Lead{
-		Name:    p.Name,
-		Phone:   sanitizePhone(p.Tel),
-		Website: p.Website,
+		Name:     p.Name,
+		Phone:    phone,
+		WhatsApp: whatsapp,
+		Website:  p.Website,
 		Address: domain.Address{
-			Street: p.Location.Address,
-			City:   p.Location.Locality,
-			State:  p.Location.Region,
+			Street:  p.Location.Address,
+			City:    p.Location.Locality,
+			State:   p.Location.Region,
 			ZipCode: p.Location.Postcode,
 		},
 		Source: []string{"foursquare"},

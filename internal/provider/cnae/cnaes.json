@@ -1,0 +1,3497 @@
+[
+  {
+    "codigo": "01113",
+    "descricao": "Cultivo de cereais",
+    "codigo_formatado": "01.11-3"
+  },
+  {
+    "codigo": "01121",
+    "descricao": "Cultivo de algodão herbáceo e de outras fibras de lavoura temporária",
+    "codigo_formatado": "01.12-1"
+  },
+  {
+    "codigo": "01130",
+    "descricao": "Cultivo de cana-de-açúcar",
+    "codigo_formatado": "01.13-0"
+  },
+  {
+    "codigo": "01148",
+    "descricao": "Cultivo de fumo",
+    "codigo_formatado": "01.14-8"
+  },
+  {
+    "codigo": "01156",
+    "descricao": "Cultivo de soja",
+    "codigo_formatado": "01.15-6"
+  },
+  {
+    "codigo": "01164",
+    "descricao": "Cultivo de oleaginosas de lavoura temporária, exceto soja",
+    "codigo_formatado": "01.16-4"
+  },
+  {
+    "codigo": "01199",
+    "descricao": "Cultivo de plantas de lavoura temporária não especificadas anteriormente",
+    "codigo_formatado": "01.19-9"
+  },
+  {
+    "codigo": "01211",
+    "descricao": "Horticultura",
+    "codigo_formatado": "01.21-1"
+  },
+  {
+    "codigo": "01229",
+    "descricao": "Cultivo de flores e plantas ornamentais",
+    "codigo_formatado": "01.22-9"
+  },
+  {
+    "codigo": "01318",
+    "descricao": "Cultivo de laranja",
+    "codigo_formatado": "01.31-8"
+  },
+  {
+    "codigo": "01326",
+    "descricao": "Cultivo de uva",
+    "codigo_formatado": "01.32-6"
+  },
+  {
+    "codigo": "01334",
+    "descricao": "Cultivo de frutas de lavoura permanente, exceto laranja e uva",
+    "codigo_formatado": "01.33-4"
+  },
+  {
+    "codigo": "01342",
+    "descricao": "Cultivo de café",
+    "codigo_formatado": "01.34-2"
+  },
+  {
+    "codigo": "01351",
+    "descricao": "Cultivo de cacau",
+    "codigo_formatado": "01.35-1"
+  },
+  {
+    "codigo": "01393",
+    "descricao": "Cultivo de plantas de lavoura permanente não especificadas anteriormente",
+    "codigo_formatado": "01.39-3"
+  },
+  {
+    "codigo": "01415",
+    "descricao": "Produção de sementes certificadas",
+    "codigo_formatado": "01.41-5"
+  },
+  {
+    "codigo": "01423",
+    "descricao": "Produção de mudas e outras formas de propagação vegetal, certificadas",
+    "codigo_formatado": "01.42-3"
+  },
+  {
+    "codigo": "01512",
+    "descricao": "Criação de bovinos",
+    "codigo_formatado": "01.51-2"
+  },
+  {
+    "codigo": "01521",
+    "descricao": "Criação de outros animais de grande porte",
+    "codigo_formatado": "01.52-1"
+  },
+  {
+    "codigo": "01539",
+    "descricao": "Criação de caprinos e ovinos",
+    "codigo_formatado": "01.53-9"
+  },
+  {
+    "codigo": "01547",
+    "descricao": "Criação de suínos",
+    "codigo_formatado": "01.54-7"
+  },
+  {
+    "codigo": "01555",
+    "descricao": "Criação de aves",
+    "codigo_formatado": "01.55-5"
+  },
+  {
+    "codigo": "01598",
+    "descricao": "Criação de animais não especificados anteriormente",
+    "codigo_formatado": "01.59-8"
+  },
+  {
+    "codigo": "01610",
+    "descricao": "Atividades de apoio à agricultura",
+    "codigo_formatado": "01.61-0"
+  },
+  {
+    "codigo": "01628",
+    "descricao": "Atividades de apoio à pecuária",
+    "codigo_formatado": "01.62-8"
+  },
+  {
+    "codigo": "01636",
+    "descricao": "Atividades de pós-colheita",
+    "codigo_formatado": "01.63-6"
+  },
+  {
+    "codigo": "01709",
+    "descricao": "Caça e serviços relacionados",
+    "codigo_formatado": "01.70-9"
+  },
+  {
+    "codigo": "02101",
+    "descricao": "Produção florestal - florestas plantadas",
+    "codigo_formatado": "02.10-1"
+  },
+  {
+    "codigo": "02209",
+    "descricao": "Produção florestal - florestas nativas",
+    "codigo_formatado": "02.20-9"
+  },
+  {
+    "codigo": "02306",
+    "descricao": "Atividades de apoio à produção florestal",
+    "codigo_formatado": "02.30-6"
+  },
+  {
+    "codigo": "Classe",
+    "descricao": "Denominação",
+    "codigo_formatado": "Classe"
+  },
+  {
+    "codigo": "03116",
+    "descricao": "Pesca em água salgada",
+    "codigo_formatado": "03.11-6"
+  },
+  {
+    "codigo": "03124",
+    "descricao": "Pesca em água doce",
+    "codigo_formatado": "03.12-4"
+  },
+  {
+    "codigo": "03213",
+    "descricao": "Aqüicultura em água salgada e salobra",
+    "codigo_formatado": "03.21-3"
+  },
+  {
+    "codigo": "03221",
+    "descricao": "Aqüicultura em água doce",
+    "codigo_formatado": "03.22-1"
+  },
+  {
+    "codigo": "05003",
+    "descricao": "Extração de carvão mineral",
+    "codigo_formatado": "05.00-3"
+  },
+  {
+    "codigo": "06000",
+    "descricao": "Extração de petróleo e gás natural",
+    "codigo_formatado": "06.00-0"
+  },
+  {
+    "codigo": "07103",
+    "descricao": "Extração de minério de ferro",
+    "codigo_formatado": "07.10-3"
+  },
+  {
+    "codigo": "07219",
+    "descricao": "Extração de minério de alumínio",
+    "codigo_formatado": "07.21-9"
+  },
+  {
+    "codigo": "07227",
+    "descricao": "Extração de minério de estanho",
+    "codigo_formatado": "07.22-7"
+  },
+  {
+    "codigo": "07235",
+    "descricao": "Extração de minério de manganês",
+    "codigo_formatado": "07.23-5"
+  },
+  {
+    "codigo": "07243",
+    "descricao": "Extração de minério de metais preciosos",
+    "codigo_formatado": "07.24-3"
+  },
+  {
+    "codigo": "07251",
+    "descricao": "Extração de minerais radioativos",
+    "codigo_formatado": "07.25-1"
+  },
+  {
+    "codigo": "07294",
+    "descricao": "Extração de minerais metálicos não-ferrosos não especificados anteriormente",
+    "codigo_formatado": "07.29-4"
+  },
+  {
+    "codigo": "08100",
+    "descricao": "Extração de pedra, areia e argila",
+    "codigo_formatado": "08.10-0"
+  },
+  {
+    "codigo": "08916",
+    "descricao": "Extração de minerais para fabricação de adubos, fertilizantes e outros produtos químicos",
+    "codigo_formatado": "08.91-6"
+  },
+  {
+    "codigo": "08924",
+    "descricao": "Extração e refino de sal marinho e sal-gema",
+    "codigo_formatado": "08.92-4"
+  },
+  {
+    "codigo": "08932",
+    "descricao": "Extração de gemas (pedras preciosas e semipreciosas)",
+    "codigo_formatado": "08.93-2"
+  },
+  {
+    "codigo": "08991",
+    "descricao": "Extração de minerais não-metálicos não especificados anteriormente",
+    "codigo_formatado": "08.99-1"
+  },
+  {
+    "codigo": "09106",
+    "descricao": "Atividades de apoio à extração de petróleo e gás natural",
+    "codigo_formatado": "09.10-6"
+  },
+  {
+    "codigo": "09904",
+    "descricao": "Atividades de apoio à extração de minerais, exceto petróleo e gás natural",
+    "codigo_formatado": "09.90-4"
+  },
+  {
+    "codigo": "10112",
+    "descricao": "Abate de reses, exceto suínos",
+    "codigo_formatado": "10.11-2"
+  },
+  {
+    "codigo": "10121",
+    "descricao": "Abate de suínos, aves e outros pequenos animais",
+    "codigo_formatado": "10.12-1"
+  },
+  {
+    "codigo": "10139",
+    "descricao": "Fabricação de produtos de carne",
+    "codigo_formatado": "10.13-9"
+  },
+  {
+    "codigo": "Classe",
+    "descricao": "Denominação",
+    "codigo_formatado": "Classe"
+  },
+  {
+    "codigo": "10201",
+    "descricao": "Preservação do pescado e fabricação de produtos do pescado",
+    "codigo_formatado": "10.20-1"
+  },
+  {
+    "codigo": "10317",
+    "descricao": "Fabricação de conservas de frutas",
+    "codigo_formatado": "10.31-7"
+  },
+  {
+    "codigo": "10325",
+    "descricao": "Fabricação de conservas de legumes e outros vegetais",
+    "codigo_formatado": "10.32-5"
+  },
+  {
+    "codigo": "10333",
+    "descricao": "Fabricação de sucos de frutas, hortaliças e legumes",
+    "codigo_formatado": "10.33-3"
+  },
+  {
+    "codigo": "10414",
+    "descricao": "Fabricação de óleos vegetais em bruto, exceto óleo de milho",
+    "codigo_formatado": "10.41-4"
+  },
+  {
+    "codigo": "10422",
+    "descricao": "Fabricação de óleos vegetais refinados, exceto óleo de milho",
+    "codigo_formatado": "10.42-2"
+  },
+  {
+    "codigo": "10431",
+    "descricao": "Fabricação de margarina e outras gorduras vegetais e de óleos não-comestíveis de animais",
+    "codigo_formatado": "10.43-1"
+  },
+  {
+    "codigo": "10511",
+    "descricao": "Preparação do leite",
+    "codigo_formatado": "10.51-1"
+  },
+  {
+    "codigo": "10520",
+    "descricao": "Fabricação de laticínios",
+    "codigo_formatado": "10.52-0"
+  },
+  {
+    "codigo": "10538",
+    "descricao": "Fabricação de sorvetes e outros gelados comestíveis",
+    "codigo_formatado": "10.53-8"
+  },
+  {
+    "codigo": "10619",
+    "descricao": "Beneficiamento de arroz e fabricação de produtos do arroz",
+    "codigo_formatado": "10.61-9"
+  },
+  {
+    "codigo": "10627",
+    "descricao": "Moagem de trigo e fabricação de derivados",
+    "codigo_formatado": "10.62-7"
+  },
+  {
+    "codigo": "10635",
+    "descricao": "Fabricação de farinha de mandioca e derivados",
+    "codigo_formatado": "10.63-5"
+  },
+  {
+    "codigo": "10643",
+    "descricao": "Fabricação de farinha de milho e derivados, exceto óleos de milho",
+    "codigo_formatado": "10.64-3"
+  },
+  {
+    "codigo": "10651",
+    "descricao": "Fabricação de amidos e féculas de vegetais e de óleos de milho",
+    "codigo_formatado": "10.65-1"
+  },
+  {
+    "codigo": "10660",
+    "descricao": "Fabricação de alimentos para animais",
+    "codigo_formatado": "10.66-0"
+  },
+  {
+    "codigo": "10694",
+    "descricao": "Moagem e fabricação de produtos de origem vegetal não especificados anteriormente",
+    "codigo_formatado": "10.69-4"
+  },
+  {
+    "codigo": "10716",
+    "descricao": "Fabricação de açúcar em bruto",
+    "codigo_formatado": "10.71-6"
+  },
+  {
+    "codigo": "10724",
+    "descricao": "Fabricação de açúcar refinado",
+    "codigo_formatado": "10.72-4"
+  },
+  {
+    "codigo": "10813",
+    "descricao": "Torrefação e moagem de café",
+    "codigo_formatado": "10.81-3"
+  },
+  {
+    "codigo": "10821",
+    "descricao": "Fabricação de produtos à base de café",
+    "codigo_formatado": "10.82-1"
+  },
+  {
+    "codigo": "10911",
+    "descricao": "Fabricação de produtos de panificação",
+    "codigo_formatado": "10.91-1"
+  },
+  {
+    "codigo": "10929",
+    "descricao": "Fabricação de biscoitos e bolachas",
+    "codigo_formatado": "10.92-9"
+  },
+  {
+    "codigo": "10937",
+    "descricao": "Fabricação de produtos derivados do cacau, de chocolates e confeitos",
+    "codigo_formatado": "10.93-7"
+  },
+  {
+    "codigo": "10945",
+    "descricao": "Fabricação de massas alimentícias",
+    "codigo_formatado": "10.94-5"
+  },
+  {
+    "codigo": "10953",
+    "descricao": "Fabricação de especiarias, molhos, temperos e condimentos",
+    "codigo_formatado": "10.95-3"
+  },
+  {
+    "codigo": "10961",
+    "descricao": "Fabricação de alimentos e pratos prontos",
+    "codigo_formatado": "10.96-1"
+  },
+  {
+    "codigo": "10996",
+    "descricao": "Fabricação de produtos alimentícios não especificados anteriormente",
+    "codigo_formatado": "10.99-6"
+  },
+  {
+    "codigo": "11119",
+    "descricao": "Fabricação de aguardentes e outras bebidas destiladas",
+    "codigo_formatado": "11.11-9"
+  },
+  {
+    "codigo": "11127",
+    "descricao": "Fabricação de vinho",
+    "codigo_formatado": "11.12-7"
+  },
+  {
+    "codigo": "11135",
+    "descricao": "Fabricação de malte, cervejas e chopes",
+    "codigo_formatado": "11.13-5"
+  },
+  {
+    "codigo": "11216",
+    "descricao": "Fabricação de águas envasadas",
+    "codigo_formatado": "11.21-6"
+  },
+  {
+    "codigo": "11224",
+    "descricao": "Fabricação de refrigerantes e de outras bebidas não-alcoólicas",
+    "codigo_formatado": "11.22-4"
+  },
+  {
+    "codigo": "Classe",
+    "descricao": "Denominação",
+    "codigo_formatado": "Classe"
+  },
+  {
+    "codigo": "12107",
+    "descricao": "Processamento industrial do fumo",
+    "codigo_formatado": "12.10-7"
+  },
+  {
+    "codigo": "12204",
+    "descricao": "Fabricação de produtos do fumo",
+    "codigo_formatado": "12.20-4"
+  },
+  {
+    "codigo": "13111",
+    "descricao": "Preparação e fiação de fibras de algodão",
+    "codigo_formatado": "13.11-1"
+  },
+  {
+    "codigo": "13120",
+    "descricao": "Preparação e fiação de fibras têxteis naturais, exceto algodão",
+    "codigo_formatado": "13.12-0"
+  },
+  {
+    "codigo": "13138",
+    "descricao": "Fiação de fibras artificiais e sintéticas",
+    "codigo_formatado": "13.13-8"
+  },
+  {
+    "codigo": "13146",
+    "descricao": "Fabricação de linhas para costurar e bordar",
+    "codigo_formatado": "13.14-6"
+  },
+  {
+    "codigo": "13219",
+    "descricao": "Tecelagem de fios de algodão",
+    "codigo_formatado": "13.21-9"
+  },
+  {
+    "codigo": "13227",
+    "descricao": "Tecelagem de fios de fibras têxteis naturais, exceto algodão",
+    "codigo_formatado": "13.22-7"
+  },
+  {
+    "codigo": "13235",
+    "descricao": "Tecelagem de fios de fibras artificiais e sintéticas",
+    "codigo_formatado": "13.23-5"
+  },
+  {
+    "codigo": "13308",
+    "descricao": "Fabricação de tecidos de malha",
+    "codigo_formatado": "13.30-8"
+  },
+  {
+    "codigo": "13405",
+    "descricao": "Acabamentos em fios, tecidos e artefatos têxteis",
+    "codigo_formatado": "13.40-5"
+  },
+  {
+    "codigo": "13511",
+    "descricao": "Fabricação de artefatos têxteis para uso doméstico",
+    "codigo_formatado": "13.51-1"
+  },
+  {
+    "codigo": "13529",
+    "descricao": "Fabricação de artefatos de tapeçaria",
+    "codigo_formatado": "13.52-9"
+  },
+  {
+    "codigo": "13537",
+    "descricao": "Fabricação de artefatos de cordoaria",
+    "codigo_formatado": "13.53-7"
+  },
+  {
+    "codigo": "13545",
+    "descricao": "Fabricação de tecidos especiais, inclusive artefatos",
+    "codigo_formatado": "13.54-5"
+  },
+  {
+    "codigo": "13596",
+    "descricao": "Fabricação de outros produtos têxteis não especificados anteriormente",
+    "codigo_formatado": "13.59-6"
+  },
+  {
+    "codigo": "14118",
+    "descricao": "Confecção de roupas íntimas",
+    "codigo_formatado": "14.11-8"
+  },
+  {
+    "codigo": "14126",
+    "descricao": "Confecção de peças do vestuário, exceto roupas íntimas",
+    "codigo_formatado": "14.12-6"
+  },
+  {
+    "codigo": "14134",
+    "descricao": "Confecção de roupas profissionais",
+    "codigo_formatado": "14.13-4"
+  },
+  {
+    "codigo": "14142",
+    "descricao": "Fabricação de acessórios do vestuário, exceto para segurança e proteção",
+    "codigo_formatado": "14.14-2"
+  },
+  {
+    "codigo": "14215",
+    "descricao": "Fabricação de meias",
+    "codigo_formatado": "14.21-5"
+  },
+  {
+    "codigo": "14223",
+    "descricao": "Fabricação de artigos do vestuário, produzidos em malharias e tricotagens, exceto meias",
+    "codigo_formatado": "14.22-3"
+  },
+  {
+    "codigo": "15106",
+    "descricao": "Curtimento e outras preparações de couro",
+    "codigo_formatado": "15.10-6"
+  },
+  {
+    "codigo": "15211",
+    "descricao": "Fabricação de artigos para viagem, bolsas e semelhantes de qualquer material",
+    "codigo_formatado": "15.21-1"
+  },
+  {
+    "codigo": "15297",
+    "descricao": "Fabricação de artefatos de couro não especificados anteriormente",
+    "codigo_formatado": "15.29-7"
+  },
+  {
+    "codigo": "15319",
+    "descricao": "Fabricação de calçados de couro",
+    "codigo_formatado": "15.31-9"
+  },
+  {
+    "codigo": "Classe",
+    "descricao": "Denominação",
+    "codigo_formatado": "Classe"
+  },
+  {
+    "codigo": "15327",
+    "descricao": "Fabricação de tênis de qualquer material",
+    "codigo_formatado": "15.32-7"
+  },
+  {
+    "codigo": "15335",
+    "descricao": "Fabricação de calçados de material sintético",
+    "codigo_formatado": "15.33-5"
+  },
+  {
+    "codigo": "15394",
+    "descricao": "Fabricação de calçados de materiais não especificados anteriormente",
+    "codigo_formatado": "15.39-4"
+  },
+  {
+    "codigo": "15408",
+    "descricao": "Fabricação de partes para calçados, de qualquer material",
+    "codigo_formatado": "15.40-8"
+  },
+  {
+    "codigo": "16102",
+    "descricao": "Desdobramento de madeira",
+    "codigo_formatado": "16.10-2"
+  },
+  {
+    "codigo": "16218",
+    "descricao": "Fabricação de madeira laminada e de chapas de madeira compensada, prensada e aglomerada",
+    "codigo_formatado": "16.21-8"
+  },
+  {
+    "codigo": "16226",
+    "descricao": "Fabricação de estruturas de madeira e de artigos de carpintaria para \nconstrução",
+    "codigo_formatado": "16.22-6"
+  },
+  {
+    "codigo": "16234",
+    "descricao": "Fabricação de artefatos de tanoaria e de embalagens de madeira",
+    "codigo_formatado": "16.23-4"
+  },
+  {
+    "codigo": "16293",
+    "descricao": "Fabricação de artefatos de madeira, palha, cortiça, vime e material trançado não especificados anteriormente, exceto móveis",
+    "codigo_formatado": "16.29-3"
+  },
+  {
+    "codigo": "17109",
+    "descricao": "Fabricação de celulose e outras pastas para a fabricação de papel",
+    "codigo_formatado": "17.10-9"
+  },
+  {
+    "codigo": "17214",
+    "descricao": "Fabricação de papel",
+    "codigo_formatado": "17.21-4"
+  },
+  {
+    "codigo": "17222",
+    "descricao": "Fabricação de cartolina e papel-cartão",
+    "codigo_formatado": "17.22-2"
+  },
+  {
+    "codigo": "17311",
+    "descricao": "Fabricação de embalagens de papel",
+    "codigo_formatado": "17.31-1"
+  },
+  {
+    "codigo": "17320",
+    "descricao": "Fabricação de embalagens de cartolina e papel-cartão",
+    "codigo_formatado": "17.32-0"
+  },
+  {
+    "codigo": "17338",
+    "descricao": "Fabricação de chapas e de embalagens de papelão ondulado",
+    "codigo_formatado": "17.33-8"
+  },
+  {
+    "codigo": "17419",
+    "descricao": "Fabricação de produtos de papel, cartolina, papel-cartão e papelão ondulado para uso comercial e de escritório",
+    "codigo_formatado": "17.41-9"
+  },
+  {
+    "codigo": "17427",
+    "descricao": "Fabricação de produtos de papel para usos doméstico e higiênico-sanitário",
+    "codigo_formatado": "17.42-7"
+  },
+  {
+    "codigo": "17494",
+    "descricao": "Fabricação de produtos de pastas celulósicas, papel, cartolina, papel-cartão e papelão ondulado não especificados anteriormente",
+    "codigo_formatado": "17.49-4"
+  },
+  {
+    "codigo": "18113",
+    "descricao": "Impressão de jornais, livros, revistas e outras publicações periódicas",
+    "codigo_formatado": "18.11-3"
+  },
+  {
+    "codigo": "18121",
+    "descricao": "Impressão de material de segurança",
+    "codigo_formatado": "18.12-1"
+  },
+  {
+    "codigo": "18130",
+    "descricao": "Impressão de materiais para outros usos",
+    "codigo_formatado": "18.13-0"
+  },
+  {
+    "codigo": "18211",
+    "descricao": "Serviços de pré-impressão",
+    "codigo_formatado": "18.21-1"
+  },
+  {
+    "codigo": "18229",
+    "descricao": "Serviços de acabamentos gráficos",
+    "codigo_formatado": "18.22-9"
+  },
+  {
+    "codigo": "18300",
+    "descricao": "Reprodução de materiais gravados em qualquer suporte",
+    "codigo_formatado": "18.30-0"
+  },
+  {
+    "codigo": "19101",
+    "descricao": "Coquerias",
+    "codigo_formatado": "19.10-1"
+  },
+  {
+    "codigo": "Classe",
+    "descricao": "Denominação",
+    "codigo_formatado": "Classe"
+  },
+  {
+    "codigo": "19217",
+    "descricao": "Fabricação de produtos do refino de petróleo",
+    "codigo_formatado": "19.21-7"
+  },
+  {
+    "codigo": "19225",
+    "descricao": "Fabricação de produtos derivados do petróleo, exceto produtos do refino",
+    "codigo_formatado": "19.22-5"
+  },
+  {
+    "codigo": "19314",
+    "descricao": "Fabricação de álcool",
+    "codigo_formatado": "19.31-4"
+  },
+  {
+    "codigo": "19322",
+    "descricao": "Fabricação de biocombustíveis, exceto álcool",
+    "codigo_formatado": "19.32-2"
+  },
+  {
+    "codigo": "20118",
+    "descricao": "Fabricação de cloro e álcalis",
+    "codigo_formatado": "20.11-8"
+  },
+  {
+    "codigo": "20126",
+    "descricao": "Fabricação de intermediários para fertilizantes",
+    "codigo_formatado": "20.12-6"
+  },
+  {
+    "codigo": "20134",
+    "descricao": "Fabricação de adubos e fertilizantes",
+    "codigo_formatado": "20.13-4"
+  },
+  {
+    "codigo": "20142",
+    "descricao": "Fabricação de gases industriais",
+    "codigo_formatado": "20.14-2"
+  },
+  {
+    "codigo": "20193",
+    "descricao": "Fabricação de produtos químicos inorgânicos não especificados anteriormente",
+    "codigo_formatado": "20.19-3"
+  },
+  {
+    "codigo": "20215",
+    "descricao": "Fabricação de produtos petroquímicos básicos",
+    "codigo_formatado": "20.21-5"
+  },
+  {
+    "codigo": "20223",
+    "descricao": "Fabricação de intermediários para plastificantes, resinas e fibras",
+    "codigo_formatado": "20.22-3"
+  },
+  {
+    "codigo": "20291",
+    "descricao": "Fabricação de produtos químicos orgânicos não especificados anteriormente",
+    "codigo_formatado": "20.29-1"
+  },
+  {
+    "codigo": "20312",
+    "descricao": "Fabricação de resinas termoplásticas",
+    "codigo_formatado": "20.31-2"
+  },
+  {
+    "codigo": "20321",
+    "descricao": "Fabricação de resinas termofixas",
+    "codigo_formatado": "20.32-1"
+  },
+  {
+    "codigo": "20339",
+    "descricao": "Fabricação de elastômeros",
+    "codigo_formatado": "20.33-9"
+  },
+  {
+    "codigo": "20401",
+    "descricao": "Fabricação de fibras artificiais e sintéticas",
+    "codigo_formatado": "20.40-1"
+  },
+  {
+    "codigo": "20517",
+    "descricao": "Fabricação de defensivos agrícolas",
+    "codigo_formatado": "20.51-7"
+  },
+  {
+    "codigo": "20525",
+    "descricao": "Fabricação de desinfestantes domissanitários",
+    "codigo_formatado": "20.52-5"
+  },
+  {
+    "codigo": "20614",
+    "descricao": "Fabricação de sabões e detergentes sintéticos",
+    "codigo_formatado": "20.61-4"
+  },
+  {
+    "codigo": "20622",
+    "descricao": "Fabricação de produtos de limpeza e polimento",
+    "codigo_formatado": "20.62-2"
+  },
+  {
+    "codigo": "20631",
+    "descricao": "Fabricação de cosméticos, produtos de perfumaria e de higiene pessoal",
+    "codigo_formatado": "20.63-1"
+  },
+  {
+    "codigo": "20711",
+    "descricao": "Fabricação de tintas, vernizes, esmaltes e lacas",
+    "codigo_formatado": "20.71-1"
+  },
+  {
+    "codigo": "20720",
+    "descricao": "Fabricação de tintas de impressão",
+    "codigo_formatado": "20.72-0"
+  },
+  {
+    "codigo": "20738",
+    "descricao": "Fabricação de impermeabilizantes, solventes e produtos afins",
+    "codigo_formatado": "20.73-8"
+  },
+  {
+    "codigo": "20916",
+    "descricao": "Fabricação de adesivos e selantes",
+    "codigo_formatado": "20.91-6"
+  },
+  {
+    "codigo": "20924",
+    "descricao": "Fabricação de explosivos",
+    "codigo_formatado": "20.92-4"
+  },
+  {
+    "codigo": "20932",
+    "descricao": "Fabricação de aditivos de uso industrial",
+    "codigo_formatado": "20.93-2"
+  },
+  {
+    "codigo": "20941",
+    "descricao": "Fabricação de catalisadores",
+    "codigo_formatado": "20.94-1"
+  },
+  {
+    "codigo": "20991",
+    "descricao": "Fabricação de produtos químicos não especificados anteriormente",
+    "codigo_formatado": "20.99-1"
+  },
+  {
+    "codigo": "21106",
+    "descricao": "Fabricação de produtos farmoquímicos",
+    "codigo_formatado": "21.10-6"
+  },
+  {
+    "codigo": "Classe",
+    "descricao": "Denominação",
+    "codigo_formatado": "Classe"
+  },
+  {
+    "codigo": "21211",
+    "descricao": "Fabricação de medicamentos para uso humano",
+    "codigo_formatado": "21.21-1"
+  },
+  {
+    "codigo": "21220",
+    "descricao": "Fabricação de medicamentos para uso veterinário",
+    "codigo_formatado": "21.22-0"
+  },
+  {
+    "codigo": "21238",
+    "descricao": "Fabricação de preparações farmacêuticas",
+    "codigo_formatado": "21.23-8"
+  },
+  {
+    "codigo": "22111",
+    "descricao": "Fabricação de pneumáticos e de câmaras-de-ar",
+    "codigo_formatado": "22.11-1"
+  },
+  {
+    "codigo": "22129",
+    "descricao": "Reforma de pneumáticos usados",
+    "codigo_formatado": "22.12-9"
+  },
+  {
+    "codigo": "22196",
+    "descricao": "Fabricação de artefatos de borracha não especificados anteriormente",
+    "codigo_formatado": "22.19-6"
+  },
+  {
+    "codigo": "22218",
+    "descricao": "Fabricação de laminados planos e tubulares de material plástico",
+    "codigo_formatado": "22.21-8"
+  },
+  {
+    "codigo": "22226",
+    "descricao": "Fabricação de embalagens de material plástico",
+    "codigo_formatado": "22.22-6"
+  },
+  {
+    "codigo": "22234",
+    "descricao": "Fabricação de tubos e acessórios de material plástico para uso na construção",
+    "codigo_formatado": "22.23-4"
+  },
+  {
+    "codigo": "22293",
+    "descricao": "Fabricação de artefatos de material plástico não especificados anteriormente",
+    "codigo_formatado": "22.29-3"
+  },
+  {
+    "codigo": "23117",
+    "descricao": "Fabricação de vidro plano e de segurança",
+    "codigo_formatado": "23.11-7"
+  },
+  {
+    "codigo": "23125",
+    "descricao": "Fabricação de embalagens de vidro",
+    "codigo_formatado": "23.12-5"
+  },
+  {
+    "codigo": "23192",
+    "descricao": "Fabricação de artigos de vidro",
+    "codigo_formatado": "23.19-2"
+  },
+  {
+    "codigo": "23206",
+    "descricao": "Fabricação de cimento",
+    "codigo_formatado": "23.20-6"
+  },
+  {
+    "codigo": "23303",
+    "descricao": "Fabricação de artefatos de concreto, cimento, fibrocimento, gesso e materiais semelhantes",
+    "codigo_formatado": "23.30-3"
+  },
+  {
+    "codigo": "23419",
+    "descricao": "Fabricação de produtos cerâmicos refratários",
+    "codigo_formatado": "23.41-9"
+  },
+  {
+    "codigo": "23427",
+    "descricao": "Fabricação de produtos cerâmicos não-refratários para uso estrutural na construção",
+    "codigo_formatado": "23.42-7"
+  },
+  {
+    "codigo": "23494",
+    "descricao": "Fabricação de produtos cerâmicos não-refratários não especificados anteriormente",
+    "codigo_formatado": "23.49-4"
+  },
+  {
+    "codigo": "23915",
+    "descricao": "Aparelhamento e outros trabalhos em pedras",
+    "codigo_formatado": "23.91-5"
+  },
+  {
+    "codigo": "23923",
+    "descricao": "Fabricação de cal e gesso",
+    "codigo_formatado": "23.92-3"
+  },
+  {
+    "codigo": "23991",
+    "descricao": "Fabricação de produtos de minerais não-metálicos não especificados anteriormente",
+    "codigo_formatado": "23.99-1"
+  },
+  {
+    "codigo": "24113",
+    "descricao": "Produção de ferro-gusa",
+    "codigo_formatado": "24.11-3"
+  },
+  {
+    "codigo": "24121",
+    "descricao": "Produção de ferroligas",
+    "codigo_formatado": "24.12-1"
+  },
+  {
+    "codigo": "24211",
+    "descricao": "Produção de semi-acabados de aço",
+    "codigo_formatado": "24.21-1"
+  },
+  {
+    "codigo": "24229",
+    "descricao": "Produção de laminados planos de aço",
+    "codigo_formatado": "24.22-9"
+  },
+  {
+    "codigo": "24237",
+    "descricao": "Produção de laminados longos de aço",
+    "codigo_formatado": "24.23-7"
+  },
+  {
+    "codigo": "24245",
+    "descricao": "Produção de relaminados, trefilados e perfilados de aço",
+    "codigo_formatado": "24.24-5"
+  },
+  {
+    "codigo": "Classe",
+    "descricao": "Denominação",
+    "codigo_formatado": "Classe"
+  },
+  {
+    "codigo": "24318",
+    "descricao": "Produção de tubos de aço com costura",
+    "codigo_formatado": "24.31-8"
+  },
+  {
+    "codigo": "24393",
+    "descricao": "Produção de outros tubos de ferro e aço",
+    "codigo_formatado": "24.39-3"
+  },
+  {
+    "codigo": "24415",
+    "descricao": "Metalurgia do alumínio e suas ligas",
+    "codigo_formatado": "24.41-5"
+  },
+  {
+    "codigo": "24423",
+    "descricao": "Metalurgia dos metais preciosos",
+    "codigo_formatado": "24.42-3"
+  },
+  {
+    "codigo": "24431",
+    "descricao": "Metalurgia do cobre",
+    "codigo_formatado": "24.43-1"
+  },
+  {
+    "codigo": "24491",
+    "descricao": "Metalurgia dos metais não-ferrosos e suas ligas não especificados anteriormente",
+    "codigo_formatado": "24.49-1"
+  },
+  {
+    "codigo": "24512",
+    "descricao": "Fundição de ferro e aço",
+    "codigo_formatado": "24.51-2"
+  },
+  {
+    "codigo": "24521",
+    "descricao": "Fundição de metais não-ferrosos e suas ligas",
+    "codigo_formatado": "24.52-1"
+  },
+  {
+    "codigo": "25110",
+    "descricao": "Fabricação de estruturas metálicas",
+    "codigo_formatado": "25.11-0"
+  },
+  {
+    "codigo": "25128",
+    "descricao": "Fabricação de esquadrias de metal",
+    "codigo_formatado": "25.12-8"
+  },
+  {
+    "codigo": "25136",
+    "descricao": "Fabricação de obras de caldeiraria pesada",
+    "codigo_formatado": "25.13-6"
+  },
+  {
+    "codigo": "25217",
+    "descricao": "Fabricação de tanques, reservatórios metálicos e caldeiras para aquecimento central",
+    "codigo_formatado": "25.21-7"
+  },
+  {
+    "codigo": "25225",
+    "descricao": "Fabricação de caldeiras geradoras de vapor, exceto para aquecimento central e para veículos",
+    "codigo_formatado": "25.22-5"
+  },
+  {
+    "codigo": "25314",
+    "descricao": "Produção de forjados de aço e de metais não-ferrosos e suas ligas",
+    "codigo_formatado": "25.31-4"
+  },
+  {
+    "codigo": "25322",
+    "descricao": "Produção de artefatos estampados de metal; metalurgia do pó",
+    "codigo_formatado": "25.32-2"
+  },
+  {
+    "codigo": "25390",
+    "descricao": "Serviços de usinagem, solda, tratamento e revestimento em metais",
+    "codigo_formatado": "25.39-0"
+  },
+  {
+    "codigo": "25411",
+    "descricao": "Fabricação de artigos de cutelaria",
+    "codigo_formatado": "25.41-1"
+  },
+  {
+    "codigo": "25420",
+    "descricao": "Fabricação de artigos de serralheria, exceto esquadrias",
+    "codigo_formatado": "25.42-0"
+  },
+  {
+    "codigo": "25438",
+    "descricao": "Fabricação de ferramentas",
+    "codigo_formatado": "25.43-8"
+  },
+  {
+    "codigo": "25501",
+    "descricao": "Fabricação de equipamento bélico pesado, armas de fogo e munições",
+    "codigo_formatado": "25.50-1"
+  },
+  {
+    "codigo": "25918",
+    "descricao": "Fabricação de embalagens metálicas",
+    "codigo_formatado": "25.91-8"
+  },
+  {
+    "codigo": "25926",
+    "descricao": "Fabricação de produtos de trefilados de metal",
+    "codigo_formatado": "25.92-6"
+  },
+  {
+    "codigo": "25934",
+    "descricao": "Fabricação de artigos de metal para uso doméstico e pessoal",
+    "codigo_formatado": "25.93-4"
+  },
+  {
+    "codigo": "25993",
+    "descricao": "Fabricação de produtos de metal não especificados anteriormente",
+    "codigo_formatado": "25.99-3"
+  },
+  {
+    "codigo": "26108",
+    "descricao": "Fabricação de componentes eletrônicos",
+    "codigo_formatado": "26.10-8"
+  },
+  {
+    "codigo": "26213",
+    "descricao": "Fabricação de equipamentos de informática",
+    "codigo_formatado": "26.21-3"
+  },
+  {
+    "codigo": "26221",
+    "descricao": "Fabricação de periféricos para equipamentos de informática",
+    "codigo_formatado": "26.22-1"
+  },
+  {
+    "codigo": "Classe",
+    "descricao": "Denominação",
+    "codigo_formatado": "Classe"
+  },
+  {
+    "codigo": "26311",
+    "descricao": "Fabricação de equipamentos transmissores de comunicação",
+    "codigo_formatado": "26.31-1"
+  },
+  {
+    "codigo": "26329",
+    "descricao": "Fabricação de aparelhos telefônicos e de outros equipamentos de comunicação",
+    "codigo_formatado": "26.32-9"
+  },
+  {
+    "codigo": "26400",
+    "descricao": "Fabricação de aparelhos de recepção, reprodução, gravação e amplificação de áudio e vídeo",
+    "codigo_formatado": "26.40-0"
+  },
+  {
+    "codigo": "26515",
+    "descricao": "Fabricação de aparelhos e equipamentos de medida, teste e controle",
+    "codigo_formatado": "26.51-5"
+  },
+  {
+    "codigo": "26523",
+    "descricao": "Fabricação de cronômetros e relógios",
+    "codigo_formatado": "26.52-3"
+  },
+  {
+    "codigo": "26604",
+    "descricao": "Fabricação de aparelhos eletromédicos e eletroterapêuticos e equipamentos de irradiação",
+    "codigo_formatado": "26.60-4"
+  },
+  {
+    "codigo": "26701",
+    "descricao": "Fabricação de equipamentos e instrumentos ópticos, fotográficos e cinematográficos",
+    "codigo_formatado": "26.70-1"
+  },
+  {
+    "codigo": "26809",
+    "descricao": "Fabricação de mídias virgens, magnéticas e ópticas",
+    "codigo_formatado": "26.80-9"
+  },
+  {
+    "codigo": "27104",
+    "descricao": "Fabricação de geradores, transformadores e motores elétricos",
+    "codigo_formatado": "27.10-4"
+  },
+  {
+    "codigo": "27210",
+    "descricao": "Fabricação de pilhas, baterias e acumuladores elétricos, exceto para veículos automotores",
+    "codigo_formatado": "27.21-0"
+  },
+  {
+    "codigo": "27228",
+    "descricao": "Fabricação de baterias e acumuladores para veículos automotores",
+    "codigo_formatado": "27.22-8"
+  },
+  {
+    "codigo": "27317",
+    "descricao": "Fabricação de aparelhos e equipamentos para distribuição e controle de energia elétrica",
+    "codigo_formatado": "27.31-7"
+  },
+  {
+    "codigo": "27325",
+    "descricao": "Fabricação de material elétrico para instalações em circuito de consumo",
+    "codigo_formatado": "27.32-5"
+  },
+  {
+    "codigo": "27333",
+    "descricao": "Fabricação de fios, cabos e condutores elétricos isolados",
+    "codigo_formatado": "27.33-3"
+  },
+  {
+    "codigo": "27406",
+    "descricao": "Fabricação de lâmpadas e outros equipamentos de iluminação",
+    "codigo_formatado": "27.40-6"
+  },
+  {
+    "codigo": "27511",
+    "descricao": "Fabricação de fogões, refrigeradores e máquinas de lavar e secar para uso doméstico",
+    "codigo_formatado": "27.51-1"
+  },
+  {
+    "codigo": "27597",
+    "descricao": "Fabricação de aparelhos eletrodomésticos não especificados anteriormente",
+    "codigo_formatado": "27.59-7"
+  },
+  {
+    "codigo": "27902",
+    "descricao": "Fabricação de equipamentos e aparelhos elétricos não especificados anteriormente",
+    "codigo_formatado": "27.90-2"
+  },
+  {
+    "codigo": "28119",
+    "descricao": "Fabricação de motores e turbinas, exceto para aviões e veículos rodoviários",
+    "codigo_formatado": "28.11-9"
+  },
+  {
+    "codigo": "Classe",
+    "descricao": "Denominação",
+    "codigo_formatado": "Classe"
+  },
+  {
+    "codigo": "28127",
+    "descricao": "Fabricação de equipamentos hidráulicos e pneumáticos, exceto válvulas",
+    "codigo_formatado": "28.12-7"
+  },
+  {
+    "codigo": "28135",
+    "descricao": "Fabricação de válvulas, registros e dispositivos semelhantes",
+    "codigo_formatado": "28.13-5"
+  },
+  {
+    "codigo": "28143",
+    "descricao": "Fabricação de compressores",
+    "codigo_formatado": "28.14-3"
+  },
+  {
+    "codigo": "28151",
+    "descricao": "Fabricação de equipamentos de transmissão para fins industriais",
+    "codigo_formatado": "28.15-1"
+  },
+  {
+    "codigo": "28216",
+    "descricao": "Fabricação de aparelhos e equipamentos para instalações térmicas",
+    "codigo_formatado": "28.21-6"
+  },
+  {
+    "codigo": "28224",
+    "descricao": "Fabricação de máquinas, equipamentos e aparelhos para transporte e elevação de cargas e pessoas",
+    "codigo_formatado": "28.22-4"
+  },
+  {
+    "codigo": "28232",
+    "descricao": "Fabricação de máquinas e aparelhos de refrigeração e ventilação para uso industrial e comercial",
+    "codigo_formatado": "28.23-2"
+  },
+  {
+    "codigo": "28241",
+    "descricao": "Fabricação de aparelhos e equipamentos de ar condicionado",
+    "codigo_formatado": "28.24-1"
+  },
+  {
+    "codigo": "28259",
+    "descricao": "Fabricação de máquinas e equipamentos para saneamento básico e ambiental",
+    "codigo_formatado": "28.25-9"
+  },
+  {
+    "codigo": "28291",
+    "descricao": "Fabricação de máquinas e equipamentos de uso geral não especificados anteriormente",
+    "codigo_formatado": "28.29-1"
+  },
+  {
+    "codigo": "28313",
+    "descricao": "Fabricação de tratores agrícolas",
+    "codigo_formatado": "28.31-3"
+  },
+  {
+    "codigo": "28321",
+    "descricao": "Fabricação de equipamentos para irrigação agrícola",
+    "codigo_formatado": "28.32-1"
+  },
+  {
+    "codigo": "28330",
+    "descricao": "Fabricação de máquinas e equipamentos para a agricultura e pecuária, exceto para irrigação",
+    "codigo_formatado": "28.33-0"
+  },
+  {
+    "codigo": "28402",
+    "descricao": "Fabricação de máquinas-ferramenta",
+    "codigo_formatado": "28.40-2"
+  },
+  {
+    "codigo": "28518",
+    "descricao": "Fabricação de máquinas e equipamentos para a prospecção e extração de petróleo",
+    "codigo_formatado": "28.51-8"
+  },
+  {
+    "codigo": "28526",
+    "descricao": "Fabricação de outras máquinas e equipamentos para uso na extração mineral, exceto na extração de petróleo",
+    "codigo_formatado": "28.52-6"
+  },
+  {
+    "codigo": "28534",
+    "descricao": "Fabricação de tratores, exceto agrícolas",
+    "codigo_formatado": "28.53-4"
+  },
+  {
+    "codigo": "28542",
+    "descricao": "Fabricação de máquinas e equipamentos para terraplenagem, pavimentação e construção, exceto tratores",
+    "codigo_formatado": "28.54-2"
+  },
+  {
+    "codigo": "28615",
+    "descricao": "Fabricação de máquinas para a indústria metalúrgica, exceto máquinas-ferramenta",
+    "codigo_formatado": "28.61-5"
+  },
+  {
+    "codigo": "28623",
+    "descricao": "Fabricação de máquinas e equipamentos para as indústrias de alimentos, bebidas e fumo",
+    "codigo_formatado": "28.62-3"
+  },
+  {
+    "codigo": "28631",
+    "descricao": "Fabricação de máquinas e equipamentos para a indústria têxtil",
+    "codigo_formatado": "28.63-1"
+  },
+  {
+    "codigo": "28640",
+    "descricao": "Fabricação de máquinas e equipamentos para as indústrias do vestuário, do couro e de calçados",
+    "codigo_formatado": "28.64-0"
+  },
+  {
+    "codigo": "28658",
+    "descricao": "Fabricação de máquinas e equipamentos para as indústrias de celulose, papel e papelão e artefatos",
+    "codigo_formatado": "28.65-8"
+  },
+  {
+    "codigo": "28666",
+    "descricao": "Fabricação de máquinas e equipamentos para a indústria do plástico",
+    "codigo_formatado": "28.66-6"
+  },
+  {
+    "codigo": "28691",
+    "descricao": "Fabricação de máquinas e equipamentos para uso industrial específico não especificados anteriormente",
+    "codigo_formatado": "28.69-1"
+  },
+  {
+    "codigo": "29107",
+    "descricao": "Fabricação de automóveis, camionetas e utilitários",
+    "codigo_formatado": "29.10-7"
+  },
+  {
+    "codigo": "Classe",
+    "descricao": "Denominação",
+    "codigo_formatado": "Classe"
+  },
+  {
+    "codigo": "29204",
+    "descricao": "Fabricação de caminhões e ônibus",
+    "codigo_formatado": "29.20-4"
+  },
+  {
+    "codigo": "29301",
+    "descricao": "Fabricação de cabines, carrocerias e reboques para veículos automotores",
+    "codigo_formatado": "29.30-1"
+  },
+  {
+    "codigo": "29417",
+    "descricao": "Fabricação de peças e acessórios para o sistema motor de veículos automotores",
+    "codigo_formatado": "29.41-7"
+  },
+  {
+    "codigo": "29425",
+    "descricao": "Fabricação de peças e acessórios para os sistemas de marcha e transmissão de veículos automotores",
+    "codigo_formatado": "29.42-5"
+  },
+  {
+    "codigo": "29433",
+    "descricao": "Fabricação de peças e acessórios para o sistema de freios de veículos automotores",
+    "codigo_formatado": "29.43-3"
+  },
+  {
+    "codigo": "29441",
+    "descricao": "Fabricação de peças e acessórios para o sistema de direção e suspensão de veículos automotores",
+    "codigo_formatado": "29.44-1"
+  },
+  {
+    "codigo": "29450",
+    "descricao": "Fabricação de material elétrico e eletrônico para veículos automotores, exceto baterias",
+    "codigo_formatado": "29.45-0"
+  },
+  {
+    "codigo": "29492",
+    "descricao": "Fabricação de peças e acessórios para veículos automotores não especificados anteriormente",
+    "codigo_formatado": "29.49-2"
+  },
+  {
+    "codigo": "29506",
+    "descricao": "Recondicionamento e recuperação de motores para veículos automotores",
+    "codigo_formatado": "29.50-6"
+  },
+  {
+    "codigo": "30113",
+    "descricao": "Construção de embarcações e estruturas flutuantes",
+    "codigo_formatado": "30.11-3"
+  },
+  {
+    "codigo": "30121",
+    "descricao": "Construção de embarcações para esporte e lazer",
+    "codigo_formatado": "30.12-1"
+  },
+  {
+    "codigo": "30318",
+    "descricao": "Fabricação de locomotivas, vagões e outros materiais rodantes",
+    "codigo_formatado": "30.31-8"
+  },
+  {
+    "codigo": "30326",
+    "descricao": "Fabricação de peças e acessórios para veículos ferroviários",
+    "codigo_formatado": "30.32-6"
+  },
+  {
+    "codigo": "30415",
+    "descricao": "Fabricação de aeronaves",
+    "codigo_formatado": "30.41-5"
+  },
+  {
+    "codigo": "30423",
+    "descricao": "Fabricação de turbinas, motores e outros componentes e peças para aeronaves",
+    "codigo_formatado": "30.42-3"
+  },
+  {
+    "codigo": "30504",
+    "descricao": "Fabricação de veículos militares de combate",
+    "codigo_formatado": "30.50-4"
+  },
+  {
+    "codigo": "30911",
+    "descricao": "Fabricação de motocicletas",
+    "codigo_formatado": "30.91-1"
+  },
+  {
+    "codigo": "30920",
+    "descricao": "Fabricação de bicicletas e triciclos não-motorizados",
+    "codigo_formatado": "30.92-0"
+  },
+  {
+    "codigo": "30997",
+    "descricao": "Fabricação de equipamentos de transporte não especificados anteriormente",
+    "codigo_formatado": "30.99-7"
+  },
+  {
+    "codigo": "31012",
+    "descricao": "Fabricação de móveis com predominância de madeira",
+    "codigo_formatado": "31.01-2"
+  },
+  {
+    "codigo": "31021",
+    "descricao": "Fabricação de móveis com predominância de metal",
+    "codigo_formatado": "31.02-1"
+  },
+  {
+    "codigo": "31039",
+    "descricao": "Fabricação de móveis de outros materiais, exceto madeira e metal",
+    "codigo_formatado": "31.03-9"
+  },
+  {
+    "codigo": "31047",
+    "descricao": "Fabricação de colchões",
+    "codigo_formatado": "31.04-7"
+  },
+  {
+    "codigo": "32116",
+    "descricao": "Lapidação de gemas e fabricação de artefatos de ourivesaria e joalheria",
+    "codigo_formatado": "32.11-6"
+  },
+  {
+    "codigo": "32124",
+    "descricao": "Fabricação de bijuterias e artefatos semelhantes",
+    "codigo_formatado": "32.12-4"
+  },
+  {
+    "codigo": "Classe",
+    "descricao": "Denominação",
+    "codigo_formatado": "Classe"
+  },
+  {
+    "codigo": "32205",
+    "descricao": "Fabricação de instrumentos musicais",
+    "codigo_formatado": "32.20-5"
+  },
+  {
+    "codigo": "32302",
+    "descricao": "Fabricação de artefatos para pesca e esporte",
+    "codigo_formatado": "32.30-2"
+  },
+  {
+    "codigo": "32400",
+    "descricao": "Fabricação de brinquedos e jogos recreativos",
+    "codigo_formatado": "32.40-0"
+  },
+  {
+    "codigo": "32507",
+    "descricao": "Fabricação de instrumentos e materiais para uso médico e odontológico e de artigos ópticos",
+    "codigo_formatado": "32.50-7"
+  },
+  {
+    "codigo": "32914",
+    "descricao": "Fabricação de escovas, pincéis e vassouras",
+    "codigo_formatado": "32.91-4"
+  },
+  {
+    "codigo": "32922",
+    "descricao": "Fabricação de equipamentos e acessórios para segurança e proteção pessoal e profissional",
+    "codigo_formatado": "32.92-2"
+  },
+  {
+    "codigo": "32990",
+    "descricao": "Fabricação de produtos diversos não especificados anteriormente",
+    "codigo_formatado": "32.99-0"
+  },
+  {
+    "codigo": "33112",
+    "descricao": "Manutenção e reparação de tanques, reservatórios metálicos e caldeiras, exceto para veículos",
+    "codigo_formatado": "33.11-2"
+  },
+  {
+    "codigo": "33121",
+    "descricao": "Manutenção e reparação de equipamentos eletrônicos e ópticos",
+    "codigo_formatado": "33.12-1"
+  },
+  {
+    "codigo": "33139",
+    "descricao": "Manutenção e reparação de máquinas e equipamentos elétricos",
+    "codigo_formatado": "33.13-9"
+  },
+  {
+    "codigo": "33147",
+    "descricao": "Manutenção e reparação de máquinas e equipamentos da indústria mecânica",
+    "codigo_formatado": "33.14-7"
+  },
+  {
+    "codigo": "33155",
+    "descricao": "Manutenção e reparação de veículos ferroviários",
+    "codigo_formatado": "33.15-5"
+  },
+  {
+    "codigo": "33163",
+    "descricao": "Manutenção e reparação de aeronaves",
+    "codigo_formatado": "33.16-3"
+  },
+  {
+    "codigo": "33171",
+    "descricao": "Manutenção e reparação de embarcações",
+    "codigo_formatado": "33.17-1"
+  },
+  {
+    "codigo": "33198",
+    "descricao": "Manutenção e reparação de equipamentos e produtos não especificados anteriormente",
+    "codigo_formatado": "33.19-8"
+  },
+  {
+    "codigo": "33210",
+    "descricao": "Instalação de máquinas e equipamentos industriais",
+    "codigo_formatado": "33.21-0"
+  },
+  {
+    "codigo": "33295",
+    "descricao": "Instalação de equipamentos não especificados anteriormente",
+    "codigo_formatado": "33.29-5"
+  },
+  {
+    "codigo": "35115",
+    "descricao": "Geração de energia elétrica",
+    "codigo_formatado": "35.11-5"
+  },
+  {
+    "codigo": "35123",
+    "descricao": "Transmissão de energia elétrica",
+    "codigo_formatado": "35.12-3"
+  },
+  {
+    "codigo": "35131",
+    "descricao": "Comércio atacadista de energia elétrica",
+    "codigo_formatado": "35.13-1"
+  },
+  {
+    "codigo": "35140",
+    "descricao": "Distribuição de energia elétrica",
+    "codigo_formatado": "35.14-0"
+  },
+  {
+    "codigo": "35204",
+    "descricao": "Produção de gás; processamento de gás natural; distribuição de combustíveis gasosos por redes urbanas",
+    "codigo_formatado": "35.20-4"
+  },
+  {
+    "codigo": "35301",
+    "descricao": "Produção e distribuição de vapor, água quente e ar condicionado",
+    "codigo_formatado": "35.30-1"
+  },
+  {
+    "codigo": "36006",
+    "descricao": "Captação, tratamento e distribuição de água",
+    "codigo_formatado": "36.00-6"
+  },
+  {
+    "codigo": "Classe",
+    "descricao": "Denominação",
+    "codigo_formatado": "Classe"
+  },
+  {
+    "codigo": "37011",
+    "descricao": "Gestão de redes de esgoto",
+    "codigo_formatado": "37.01-1"
+  },
+  {
+    "codigo": "37029",
+    "descricao": "Atividades relacionadas a esgoto, exceto a gestão de redes",
+    "codigo_formatado": "37.02-9"
+  },
+  {
+    "codigo": "38114",
+    "descricao": "Coleta de resíduos não-perigosos",
+    "codigo_formatado": "38.11-4"
+  },
+  {
+    "codigo": "38122",
+    "descricao": "Coleta de resíduos perigosos",
+    "codigo_formatado": "38.12-2"
+  },
+  {
+    "codigo": "38211",
+    "descricao": "Tratamento e disposição de resíduos não-perigosos",
+    "codigo_formatado": "38.21-1"
+  },
+  {
+    "codigo": "38220",
+    "descricao": "Tratamento e disposição de resíduos perigosos",
+    "codigo_formatado": "38.22-0"
+  },
+  {
+    "codigo": "38319",
+    "descricao": "Recuperação de materiais metálicos",
+    "codigo_formatado": "38.31-9"
+  },
+  {
+    "codigo": "38327",
+    "descricao": "Recuperação de materiais plásticos",
+    "codigo_formatado": "38.32-7"
+  },
+  {
+    "codigo": "38394",
+    "descricao": "Recuperação de materiais não especificados anteriormente",
+    "codigo_formatado": "38.39-4"
+  },
+  {
+    "codigo": "39005",
+    "descricao": "Descontaminação e outros serviços de gestão de resíduos",
+    "codigo_formatado": "39.00-5"
+  },
+  {
+    "codigo": "41107",
+    "descricao": "Incorporação de empreendimentos imobiliários",
+    "codigo_formatado": "41.10-7"
+  },
+  {
+    "codigo": "41204",
+    "descricao": "Construção de edifícios",
+    "codigo_formatado": "41.20-4"
+  },
+  {
+    "codigo": "42111",
+    "descricao": "Construção de rodovias e ferrovias",
+    "codigo_formatado": "42.11-1"
+  },
+  {
+    "codigo": "42120",
+    "descricao": "Construção de obras-de-arte especiais",
+    "codigo_formatado": "42.12-0"
+  },
+  {
+    "codigo": "42138",
+    "descricao": "Obras de urbanização - ruas, praças e calçadas",
+    "codigo_formatado": "42.13-8"
+  },
+  {
+    "codigo": "42219",
+    "descricao": "Obras para geração e distribuição de energia elétrica e para telecomunicações",
+    "codigo_formatado": "42.21-9"
+  },
+  {
+    "codigo": "42227",
+    "descricao": "Construção de redes de abastecimento de água, coleta de esgoto e construções correlatas",
+    "codigo_formatado": "42.22-7"
+  },
+  {
+    "codigo": "42235",
+    "descricao": "Construção de redes de transportes por dutos, exceto para água e esgoto",
+    "codigo_formatado": "42.23-5"
+  },
+  {
+    "codigo": "42910",
+    "descricao": "Obras portuárias, marítimas e fluviais",
+    "codigo_formatado": "42.91-0"
+  },
+  {
+    "codigo": "42928",
+    "descricao": "Montagem de instalações industriais e de estruturas metálicas",
+    "codigo_formatado": "42.92-8"
+  },
+  {
+    "codigo": "42995",
+    "descricao": "Obras de engenharia civil não especificadas anteriormente",
+    "codigo_formatado": "42.99-5"
+  },
+  {
+    "codigo": "43118",
+    "descricao": "Demolição e preparação de canteiros de obras",
+    "codigo_formatado": "43.11-8"
+  },
+  {
+    "codigo": "43126",
+    "descricao": "Perfurações e sondagens",
+    "codigo_formatado": "43.12-6"
+  },
+  {
+    "codigo": "43134",
+    "descricao": "Obras de terraplenagem",
+    "codigo_formatado": "43.13-4"
+  },
+  {
+    "codigo": "43193",
+    "descricao": "Serviços de preparação do terreno não especificados anteriormente",
+    "codigo_formatado": "43.19-3"
+  },
+  {
+    "codigo": "Classe",
+    "descricao": "Denominação",
+    "codigo_formatado": "Classe"
+  },
+  {
+    "codigo": "43215",
+    "descricao": "Instalações elétricas",
+    "codigo_formatado": "43.21-5"
+  },
+  {
+    "codigo": "43223",
+    "descricao": "Instalações hidráulicas, de sistemas de ventilação e refrigeração",
+    "codigo_formatado": "43.22-3"
+  },
+  {
+    "codigo": "43291",
+    "descricao": "Obras de instalações em construções não especificadas anteriormente",
+    "codigo_formatado": "43.29-1"
+  },
+  {
+    "codigo": "43304",
+    "descricao": "Obras de acabamento",
+    "codigo_formatado": "43.30-4"
+  },
+  {
+    "codigo": "43916",
+    "descricao": "Obras de fundações",
+    "codigo_formatado": "43.91-6"
+  },
+  {
+    "codigo": "43991",
+    "descricao": "Serviços especializados para construção não especificados anteriormente",
+    "codigo_formatado": "43.99-1"
+  },
+  {
+    "codigo": "45111",
+    "descricao": "Comércio a varejo e por atacado de veículos automotores",
+    "codigo_formatado": "45.11-1"
+  },
+  {
+    "codigo": "45129",
+    "descricao": "Representantes comerciais e agentes do comércio de veículos automotores",
+    "codigo_formatado": "45.12-9"
+  },
+  {
+    "codigo": "45200",
+    "descricao": "Manutenção e reparação de veículos automotores",
+    "codigo_formatado": "45.20-0"
+  },
+  {
+    "codigo": "45307",
+    "descricao": "Comércio de peças e acessórios para veículos automotores",
+    "codigo_formatado": "45.30-7"
+  },
+  {
+    "codigo": "45412",
+    "descricao": "Comércio por atacado e a varejo de motocicletas, peças e acessórios",
+    "codigo_formatado": "45.41-2"
+  },
+  {
+    "codigo": "45421",
+    "descricao": "Representantes comerciais e agentes do comércio de motocicletas, peças e acessórios",
+    "codigo_formatado": "45.42-1"
+  },
+  {
+    "codigo": "45439",
+    "descricao": "Manutenção e reparação de motocicletas",
+    "codigo_formatado": "45.43-9"
+  },
+  {
+    "codigo": "46117",
+    "descricao": "Representantes comerciais e agentes do comércio de matérias-primas agrícolas e animais vivos",
+    "codigo_formatado": "46.11-7"
+  },
+  {
+    "codigo": "46125",
+    "descricao": "Representantes comerciais e agentes do comércio de combustíveis, minerais, produtos siderúrgicos e químicos",
+    "codigo_formatado": "46.12-5"
+  },
+  {
+    "codigo": "46133",
+    "descricao": "Representantes comerciais e agentes do comércio de madeira, material de construção e ferragens",
+    "codigo_formatado": "46.13-3"
+  },
+  {
+    "codigo": "46141",
+    "descricao": "Representantes comerciais e agentes do comércio de máquinas, equipamentos, embarcações e aeronaves",
+    "codigo_formatado": "46.14-1"
+  },
+  {
+    "codigo": "46150",
+    "descricao": "Representantes comerciais e agentes do comércio de eletrodomésticos, móveis e artigos de uso doméstico",
+    "codigo_formatado": "46.15-0"
+  },
+  {
+    "codigo": "46168",
+    "descricao": "Representantes comerciais e agentes do comércio de têxteis, vestuário, calçados e artigos de viagem",
+    "codigo_formatado": "46.16-8"
+  },
+  {
+    "codigo": "46176",
+    "descricao": "Representantes comerciais e agentes do comércio de produtos alimentícios, bebidas e fumo",
+    "codigo_formatado": "46.17-6"
+  },
+  {
+    "codigo": "46184",
+    "descricao": "Representantes comerciais e agentes do comércio especializado em produtos não especificados anteriormente",
+    "codigo_formatado": "46.18-4"
+  },
+  {
+    "codigo": "46192",
+    "descricao": "Representantes comerciais e agentes do comércio de mercadorias em geral não especializado",
+    "codigo_formatado": "46.19-2"
+  },
+  {
+    "codigo": "Classe",
+    "descricao": "Denominação",
+    "codigo_formatado": "Classe"
+  },
+  {
+    "codigo": "46214",
+    "descricao": "Comércio atacadista de café em grão",
+    "codigo_formatado": "46.21-4"
+  },
+  {
+    "codigo": "46222",
+    "descricao": "Comércio atacadista de soja",
+    "codigo_formatado": "46.22-2"
+  },
+  {
+    "codigo": "46231",
+    "descricao": "Comércio atacadista de animais vivos, alimentos para animais e matérias-primas agrícolas, exceto café e soja",
+    "codigo_formatado": "46.23-1"
+  },
+  {
+    "codigo": "46311",
+    "descricao": "Comércio atacadista de leite e laticínios",
+    "codigo_formatado": "46.31-1"
+  },
+  {
+    "codigo": "46320",
+    "descricao": "Comércio atacadista de cereais e leguminosas beneficiados, farinhas, amidos e féculas",
+    "codigo_formatado": "46.32-0"
+  },
+  {
+    "codigo": "46338",
+    "descricao": "Comércio atacadista de hortifrutigranjeiros",
+    "codigo_formatado": "46.33-8"
+  },
+  {
+    "codigo": "46346",
+    "descricao": "Comércio atacadista de carnes, produtos da carne e pescado",
+    "codigo_formatado": "46.34-6"
+  },
+  {
+    "codigo": "46354",
+    "descricao": "Comércio atacadista de bebidas",
+    "codigo_formatado": "46.35-4"
+  },
+  {
+    "codigo": "46362",
+    "descricao": "Comércio atacadista de produtos do fumo",
+    "codigo_formatado": "46.36-2"
+  },
+  {
+    "codigo": "46371",
+    "descricao": "Comércio atacadista especializado em produtos alimentícios não especificados anteriormente",
+    "codigo_formatado": "46.37-1"
+  },
+  {
+    "codigo": "46397",
+    "descricao": "Comércio atacadista de produtos alimentícios em geral",
+    "codigo_formatado": "46.39-7"
+  },
+  {
+    "codigo": "46419",
+    "descricao": "Comércio atacadista de tecidos, artefatos de tecidos e de armarinho",
+    "codigo_formatado": "46.41-9"
+  },
+  {
+    "codigo": "46427",
+    "descricao": "Comércio atacadista de artigos do vestuário e acessórios",
+    "codigo_formatado": "46.42-7"
+  },
+  {
+    "codigo": "46435",
+    "descricao": "Comércio atacadista de calçados e artigos de viagem",
+    "codigo_formatado": "46.43-5"
+  },
+  {
+    "codigo": "46443",
+    "descricao": "Comércio atacadista de produtos farmacêuticos para uso humano e veterinário",
+    "codigo_formatado": "46.44-3"
+  },
+  {
+    "codigo": "46451",
+    "descricao": "Comércio atacadista de instrumentos e materiais para uso médico, cirúrgico, ortopédico e odontológico",
+    "codigo_formatado": "46.45-1"
+  },
+  {
+    "codigo": "46460",
+    "descricao": "Comércio atacadista de cosméticos, produtos de perfumaria e de higiene pessoal",
+    "codigo_formatado": "46.46-0"
+  },
+  {
+    "codigo": "46478",
+    "descricao": "Comércio atacadista de artigos de escritório e de papelaria; livros, jornais e outras publicações",
+    "codigo_formatado": "46.47-8"
+  },
+  {
+    "codigo": "46494",
+    "descricao": "Comércio atacadista de equipamentos e artigos de uso pessoal e doméstico não especificados anteriormente",
+    "codigo_formatado": "46.49-4"
+  },
+  {
+    "codigo": "46516",
+    "descricao": "Comércio atacadista de computadores, periféricos e suprimentos de informática",
+    "codigo_formatado": "46.51-6"
+  },
+  {
+    "codigo": "46524",
+    "descricao": "Comércio atacadista de componentes eletrônicos e equipamentos de telefonia e comunicação",
+    "codigo_formatado": "46.52-4"
+  },
+  {
+    "codigo": "46613",
+    "descricao": "Comércio atacadista de máquinas, aparelhos e equipamentos para uso agropecuário; partes e peças",
+    "codigo_formatado": "46.61-3"
+  },
+  {
+    "codigo": "46621",
+    "descricao": "Comércio atacadista de máquinas, equipamentos para terraplenagem, mineração e construção; partes e peças",
+    "codigo_formatado": "46.62-1"
+  },
+  {
+    "codigo": "46630",
+    "descricao": "Comércio atacadista de máquinas e equipamentos para uso industrial; partes e peças",
+    "codigo_formatado": "46.63-0"
+  },
+  {
+    "codigo": "46648",
+    "descricao": "Comércio atacadista de máquinas, aparelhos e equipamentos para uso odonto-médico-hospitalar; partes e peças",
+    "codigo_formatado": "46.64-8"
+  },
+  {
+    "codigo": "46656",
+    "descricao": "Comércio atacadista de máquinas e equipamentos para uso comercial; partes e peças",
+    "codigo_formatado": "46.65-6"
+  },
+  {
+    "codigo": "46699",
+    "descricao": "Comércio atacadista de máquinas, aparelhos e equipamentos não especificados anteriormente; partes e peças",
+    "codigo_formatado": "46.69-9"
+  },
+  {
+    "codigo": "Classe",
+    "descricao": "Denominação",
+    "codigo_formatado": "Classe"
+  },
+  {
+    "codigo": "46711",
+    "descricao": "Comércio atacadista de madeira e produtos derivados",
+    "codigo_formatado": "46.71-1"
+  },
+  {
+    "codigo": "46729",
+    "descricao": "Comércio atacadista de ferragens e ferramentas",
+    "codigo_formatado": "46.72-9"
+  },
+  {
+    "codigo": "46737",
+    "descricao": "Comércio atacadista de material elétrico",
+    "codigo_formatado": "46.73-7"
+  },
+  {
+    "codigo": "46745",
+    "descricao": "Comércio atacadista de cimento",
+    "codigo_formatado": "46.74-5"
+  },
+  {
+    "codigo": "46796",
+    "descricao": "Comércio atacadista especializado de materiais de construção não especificados anteriormente e de materiais de construção em geral",
+    "codigo_formatado": "46.79-6"
+  },
+  {
+    "codigo": "46818",
+    "descricao": "Comércio atacadista de combustíveis sólidos, líquidos e gasosos, exceto gás natural e GLP",
+    "codigo_formatado": "46.81-8"
+  },
+  {
+    "codigo": "46826",
+    "descricao": "Comércio atacadista de gás liqüefeito de petróleo (GLP)",
+    "codigo_formatado": "46.82-6"
+  },
+  {
+    "codigo": "46834",
+    "descricao": "Comércio atacadista de defensivos agrícolas, adubos, fertilizantes e corretivos do solo",
+    "codigo_formatado": "46.83-4"
+  },
+  {
+    "codigo": "46842",
+    "descricao": "Comércio atacadista de produtos químicos e petroquímicos, exceto agroquímicos",
+    "codigo_formatado": "46.84-2"
+  },
+  {
+    "codigo": "46851",
+    "descricao": "Comércio atacadista de produtos siderúrgicos e metalúrgicos, exceto para construção",
+    "codigo_formatado": "46.85-1"
+  },
+  {
+    "codigo": "46869",
+    "descricao": "Comércio atacadista de papel e papelão em bruto e de embalagens",
+    "codigo_formatado": "46.86-9"
+  },
+  {
+    "codigo": "46877",
+    "descricao": "Comércio atacadista de resíduos e sucatas",
+    "codigo_formatado": "46.87-7"
+  },
+  {
+    "codigo": "46893",
+    "descricao": "Comércio atacadista especializado de outros produtos intermediários não especificados anteriormente",
+    "codigo_formatado": "46.89-3"
+  },
+  {
+    "codigo": "46915",
+    "descricao": "Comércio atacadista de mercadorias em geral, com predominância de produtos alimentícios",
+    "codigo_formatado": "46.91-5"
+  },
+  {
+    "codigo": "46923",
+    "descricao": "Comércio atacadista de mercadorias em geral, com predominância de insumos agropecuários",
+    "codigo_formatado": "46.92-3"
+  },
+  {
+    "codigo": "46931",
+    "descricao": "Comércio atacadista de mercadorias em geral, sem predominância de alimentos ou de insumos agropecuários",
+    "codigo_formatado": "46.93-1"
+  },
+  {
+    "codigo": "47113",
+    "descricao": "Comércio varejista de mercadorias em geral, com predominância de produtos alimentícios - hipermercados e supermercados",
+    "codigo_formatado": "47.11-3"
+  },
+  {
+    "codigo": "47121",
+    "descricao": "Comércio varejista de mercadorias em geral, com predominância de produtos alimentícios - minimercados, mercearias e armazéns",
+    "codigo_formatado": "47.12-1"
+  },
+  {
+    "codigo": "47130",
+    "descricao": "Comércio varejista de mercadorias em geral, sem predominância de produtos alimentícios",
+    "codigo_formatado": "47.13-0"
+  },
+  {
+    "codigo": "47211",
+    "descricao": "Comércio varejista de produtos de padaria, laticínio, doces, balas e semelhantes",
+    "codigo_formatado": "47.21-1"
+  },
+  {
+    "codigo": "47229",
+    "descricao": "Comércio varejista de carnes e pescados - açougues e peixarias",
+    "codigo_formatado": "47.22-9"
+  },
+  {
+    "codigo": "47237",
+    "descricao": "Comércio varejista de bebidas",
+    "codigo_formatado": "47.23-7"
+  },
+  {
+    "codigo": "47245",
+    "descricao": "Comércio varejista de hortifrutigranjeiros",
+    "codigo_formatado": "47.24-5"
+  },
+  {
+    "codigo": "47296",
+    "descricao": "Comércio varejista de produtos alimentícios em geral ou especializado em produtos alimentícios não especificados anteriormente; produtos do fumo",
+    "codigo_formatado": "47.29-6"
+  },
+  {
+    "codigo": "47318",
+    "descricao": "Comércio varejista de combustíveis para veículos automotores",
+    "codigo_formatado": "47.31-8"
+  },
+  {
+    "codigo": "47326",
+    "descricao": "Comércio varejista de lubrificantes",
+    "codigo_formatado": "47.32-6"
+  },
+  {
+    "codigo": "Classe",
+    "descricao": "Denominação",
+    "codigo_formatado": "Classe"
+  },
+  {
+    "codigo": "47415",
+    "descricao": "Comércio varejista de tintas e materiais para pintura",
+    "codigo_formatado": "47.41-5"
+  },
+  {
+    "codigo": "47423",
+    "descricao": "Comércio varejista de material elétrico",
+    "codigo_formatado": "47.42-3"
+  },
+  {
+    "codigo": "47431",
+    "descricao": "Comércio varejista de vidros",
+    "codigo_formatado": "47.43-1"
+  },
+  {
+    "codigo": "47440",
+    "descricao": "Comércio varejista de ferragens, madeira e materiais de construção",
+    "codigo_formatado": "47.44-0"
+  },
+  {
+    "codigo": "47512",
+    "descricao": "Comércio varejista especializado de equipamentos e suprimentos de informática",
+    "codigo_formatado": "47.51-2"
+  },
+  {
+    "codigo": "47521",
+    "descricao": "Comércio varejista especializado de equipamentos de telefonia e comunicação",
+    "codigo_formatado": "47.52-1"
+  },
+  {
+    "codigo": "47539",
+    "descricao": "Comércio varejista especializado de eletrodomésticos e equipamentos de áudio e vídeo",
+    "codigo_formatado": "47.53-9"
+  },
+  {
+    "codigo": "47547",
+    "descricao": "Comércio varejista especializado de móveis, colchoaria e artigos de iluminação",
+    "codigo_formatado": "47.54-7"
+  },
+  {
+    "codigo": "47555",
+    "descricao": "Comércio varejista especializado de tecidos e artigos de cama, mesa e banho",
+    "codigo_formatado": "47.55-5"
+  },
+  {
+    "codigo": "47563",
+    "descricao": "Comércio varejista especializado de instrumentos musicais e acessórios",
+    "codigo_formatado": "47.56-3"
+  },
+  {
+    "codigo": "47571",
+    "descricao": "Comércio varejista especializado de peças e acessórios para aparelhos eletroeletrônicos para uso doméstico, exceto informática e comunicação",
+    "codigo_formatado": "47.57-1"
+  },
+  {
+    "codigo": "47598",
+    "descricao": "Comércio varejista de artigos de uso doméstico não especificados anteriormente",
+    "codigo_formatado": "47.59-8"
+  },
+  {
+    "codigo": "47610",
+    "descricao": "Comércio varejista de livros, jornais, revistas e papelaria",
+    "codigo_formatado": "47.61-0"
+  },
+  {
+    "codigo": "47628",
+    "descricao": "Comércio varejista de discos, CDs, DVDs e fitas",
+    "codigo_formatado": "47.62-8"
+  },
+  {
+    "codigo": "47636",
+    "descricao": "Comércio varejista de artigos recreativos e esportivos",
+    "codigo_formatado": "47.63-6"
+  },
+  {
+    "codigo": "47717",
+    "descricao": "Comércio varejista de produtos farmacêuticos para uso humano e veterinário",
+    "codigo_formatado": "47.71-7"
+  },
+  {
+    "codigo": "47725",
+    "descricao": "Comércio varejista de cosméticos, produtos de perfumaria e de higiene pessoal",
+    "codigo_formatado": "47.72-5"
+  },
+  {
+    "codigo": "47733",
+    "descricao": "Comércio varejista de artigos médicos e ortopédicos",
+    "codigo_formatado": "47.73-3"
+  },
+  {
+    "codigo": "47741",
+    "descricao": "Comércio varejista de artigos de óptica",
+    "codigo_formatado": "47.74-1"
+  },
+  {
+    "codigo": "47814",
+    "descricao": "Comércio varejista de artigos do vestuário e acessórios",
+    "codigo_formatado": "47.81-4"
+  },
+  {
+    "codigo": "47822",
+    "descricao": "Comércio varejista de calçados e artigos de viagem",
+    "codigo_formatado": "47.82-2"
+  },
+  {
+    "codigo": "47831",
+    "descricao": "Comércio varejista de jóias e relógios",
+    "codigo_formatado": "47.83-1"
+  },
+  {
+    "codigo": "47849",
+    "descricao": "Comércio varejista de gás liqüefeito de petróleo (GLP)",
+    "codigo_formatado": "47.84-9"
+  },
+  {
+    "codigo": "47857",
+    "descricao": "Comércio varejista de artigos usados",
+    "codigo_formatado": "47.85-7"
+  },
+  {
+    "codigo": "47890",
+    "descricao": "Comércio varejista de outros produtos novos não especificados anteriormente",
+    "codigo_formatado": "47.89-0"
+  },
+  {
+    "codigo": "47903",
+    "descricao": "Comércio ambulante e outros tipos de comércio varejista",
+    "codigo_formatado": "47.90-3"
+  },
+  {
+    "codigo": "49116",
+    "descricao": "Transporte ferroviário de carga",
+    "codigo_formatado": "49.11-6"
+  },
+  {
+    "codigo": "49124",
+    "descricao": "Transporte metroferroviário de passageiros",
+    "codigo_formatado": "49.12-4"
+  },
+  {
+    "codigo": "49213",
+    "descricao": "Transporte rodoviário coletivo de passageiros, com itinerário fixo, municipal e em região metropolitana",
+    "codigo_formatado": "49.21-3"
+  },
+  {
+    "codigo": "Classe",
+    "descricao": "Denominação",
+    "codigo_formatado": "Classe"
+  },
+  {
+    "codigo": "49221",
+    "descricao": "Transporte rodoviário coletivo de passageiros, com itinerário fixo, intermunicipal, interestadual e internacional",
+    "codigo_formatado": "49.22-1"
+  },
+  {
+    "codigo": "49230",
+    "descricao": "Transporte rodoviário de táxi",
+    "codigo_formatado": "49.23-0"
+  },
+  {
+    "codigo": "49248",
+    "descricao": "Transporte escolar",
+    "codigo_formatado": "49.24-8"
+  },
+  {
+    "codigo": "49299",
+    "descricao": "Transporte rodoviário coletivo de passageiros, sob regime de fretamento, e outros transportes rodoviários não especificados anteriormente",
+    "codigo_formatado": "49.29-9"
+  },
+  {
+    "codigo": "49302",
+    "descricao": "Transporte rodoviário de carga",
+    "codigo_formatado": "49.30-2"
+  },
+  {
+    "codigo": "49400",
+    "descricao": "Transporte dutoviário",
+    "codigo_formatado": "49.40-0"
+  },
+  {
+    "codigo": "49507",
+    "descricao": "Trens turísticos, teleféricos e similares",
+    "codigo_formatado": "49.50-7"
+  },
+  {
+    "codigo": "50114",
+    "descricao": "Transporte marítimo de cabotagem",
+    "codigo_formatado": "50.11-4"
+  },
+  {
+    "codigo": "50122",
+    "descricao": "Transporte marítimo de longo curso",
+    "codigo_formatado": "50.12-2"
+  },
+  {
+    "codigo": "50211",
+    "descricao": "Transporte por navegação interior de carga",
+    "codigo_formatado": "50.21-1"
+  },
+  {
+    "codigo": "50220",
+    "descricao": "Transporte por navegação interior de passageiros em linhas regulares",
+    "codigo_formatado": "50.22-0"
+  },
+  {
+    "codigo": "50301",
+    "descricao": "Navegação de apoio",
+    "codigo_formatado": "50.30-1"
+  },
+  {
+    "codigo": "50912",
+    "descricao": "Transporte por navegação de travessia",
+    "codigo_formatado": "50.91-2"
+  },
+  {
+    "codigo": "50998",
+    "descricao": "Transportes aquaviários não especificados anteriormente",
+    "codigo_formatado": "50.99-8"
+  },
+  {
+    "codigo": "51111",
+    "descricao": "Transporte aéreo de passageiros regular",
+    "codigo_formatado": "51.11-1"
+  },
+  {
+    "codigo": "51129",
+    "descricao": "Transporte aéreo de passageiros não-regular",
+    "codigo_formatado": "51.12-9"
+  },
+  {
+    "codigo": "51200",
+    "descricao": "Transporte aéreo de carga",
+    "codigo_formatado": "51.20-0"
+  },
+  {
+    "codigo": "51307",
+    "descricao": "Transporte espacial",
+    "codigo_formatado": "51.30-7"
+  },
+  {
+    "codigo": "52117",
+    "descricao": "Armazenamento",
+    "codigo_formatado": "52.11-7"
+  },
+  {
+    "codigo": "52125",
+    "descricao": "Carga e descarga",
+    "codigo_formatado": "52.12-5"
+  },
+  {
+    "codigo": "52214",
+    "descricao": "Concessionárias de rodovias, pontes, túneis e serviços relacionados",
+    "codigo_formatado": "52.21-4"
+  },
+  {
+    "codigo": "52222",
+    "descricao": "Terminais rodoviários e ferroviários",
+    "codigo_formatado": "52.22-2"
+  },
+  {
+    "codigo": "52231",
+    "descricao": "Estacionamento de veículos",
+    "codigo_formatado": "52.23-1"
+  },
+  {
+    "codigo": "52290",
+    "descricao": "Atividades auxiliares dos transportes terrestres não especificadas anteriormente",
+    "codigo_formatado": "52.29-0"
+  },
+  {
+    "codigo": "52311",
+    "descricao": "Gestão de portos e terminais",
+    "codigo_formatado": "52.31-1"
+  },
+  {
+    "codigo": "52320",
+    "descricao": "Atividades de agenciamento marítimo",
+    "codigo_formatado": "52.32-0"
+  },
+  {
+    "codigo": "Classe",
+    "descricao": "Denominação",
+    "codigo_formatado": "Classe"
+  },
+  {
+    "codigo": "52397",
+    "descricao": "Atividades auxiliares dos transportes aquaviários não especificadas anteriormente",
+    "codigo_formatado": "52.39-7"
+  },
+  {
+    "codigo": "52401",
+    "descricao": "Atividades auxiliares dos transportes aéreos",
+    "codigo_formatado": "52.40-1"
+  },
+  {
+    "codigo": "52508",
+    "descricao": "Atividades relacionadas à organização do transporte de carga",
+    "codigo_formatado": "52.50-8"
+  },
+  {
+    "codigo": "53105",
+    "descricao": "Atividades de Correio",
+    "codigo_formatado": "53.10-5"
+  },
+  {
+    "codigo": "53202",
+    "descricao": "Atividades de malote e de entrega",
+    "codigo_formatado": "53.20-2"
+  },
+  {
+    "codigo": "55108",
+    "descricao": "Hotéis e similares",
+    "codigo_formatado": "55.10-8"
+  },
+  {
+    "codigo": "55906",
+    "descricao": "Outros tipos de alojamento não especificados anteriormente",
+    "codigo_formatado": "55.90-6"
+  },
+  {
+    "codigo": "56112",
+    "descricao": "Restaurantes e outros estabelecimentos de serviços de alimentação e bebidas",
+    "codigo_formatado": "56.11-2"
+  },
+  {
+    "codigo": "56121",
+    "descricao": "Serviços ambulantes de alimentação",
+    "codigo_formatado": "56.12-1"
+  },
+  {
+    "codigo": "56201",
+    "descricao": "Serviços de catering, bufê e outros serviços de comida preparada",
+    "codigo_formatado": "56.20-1"
+  },
+  {
+    "codigo": "58115",
+    "descricao": "Edição de livros",
+    "codigo_formatado": "58.11-5"
+  },
+  {
+    "codigo": "58123",
+    "descricao": "Edição de jornais",
+    "codigo_formatado": "58.12-3"
+  },
+  {
+    "codigo": "58131",
+    "descricao": "Edição de revistas",
+    "codigo_formatado": "58.13-1"
+  },
+  {
+    "codigo": "58191",
+    "descricao": "Edição de cadastros, listas e outros produtos gráficos",
+    "codigo_formatado": "58.19-1"
+  },
+  {
+    "codigo": "58212",
+    "descricao": "Edição integrada à impressão de livros",
+    "codigo_formatado": "58.21-2"
+  },
+  {
+    "codigo": "58221",
+    "descricao": "Edição integrada à impressão de jornais",
+    "codigo_formatado": "58.22-1"
+  },
+  {
+    "codigo": "58239",
+    "descricao": "Edição integrada à impressão de revistas",
+    "codigo_formatado": "58.23-9"
+  },
+  {
+    "codigo": "58298",
+    "descricao": "Edição integrada à impressão de cadastros, listas e outros produtos gráficos",
+    "codigo_formatado": "58.29-8"
+  },
+  {
+    "codigo": "59111",
+    "descricao": "Atividades de produção cinematográfica, de vídeos e de programas de televisão",
+    "codigo_formatado": "59.11-1"
+  },
+  {
+    "codigo": "59120",
+    "descricao": "Atividades de pós-produção cinematográfica, de vídeos e de programas de televisão",
+    "codigo_formatado": "59.12-0"
+  },
+  {
+    "codigo": "59138",
+    "descricao": "Distribuição cinematográfica, de vídeo e de programas de televisão",
+    "codigo_formatado": "59.13-8"
+  },
+  {
+    "codigo": "59146",
+    "descricao": "Atividades de exibição cinematográfica",
+    "codigo_formatado": "59.14-6"
+  },
+  {
+    "codigo": "Classe",
+    "descricao": "Denominação",
+    "codigo_formatado": "Classe"
+  },
+  {
+    "codigo": "59201",
+    "descricao": "Atividades de gravação de som e de edição de música",
+    "codigo_formatado": "59.20-1"
+  },
+  {
+    "codigo": "60101",
+    "descricao": "Atividades de rádio",
+    "codigo_formatado": "60.10-1"
+  },
+  {
+    "codigo": "60217",
+    "descricao": "Atividades de televisão aberta",
+    "codigo_formatado": "60.21-7"
+  },
+  {
+    "codigo": "60225",
+    "descricao": "Programadoras e atividades relacionadas à televisão por assinatura",
+    "codigo_formatado": "60.22-5"
+  },
+  {
+    "codigo": "61108",
+    "descricao": "Telecomunicações por fio",
+    "codigo_formatado": "61.10-8"
+  },
+  {
+    "codigo": "61205",
+    "descricao": "Telecomunicações sem fio",
+    "codigo_formatado": "61.20-5"
+  },
+  {
+    "codigo": "61302",
+    "descricao": "Telecomunicações por satélite",
+    "codigo_formatado": "61.30-2"
+  },
+  {
+    "codigo": "61418",
+    "descricao": "Operadoras de televisão por assinatura por cabo",
+    "codigo_formatado": "61.41-8"
+  },
+  {
+    "codigo": "61426",
+    "descricao": "Operadoras de televisão por assinatura por microondas",
+    "codigo_formatado": "61.42-6"
+  },
+  {
+    "codigo": "61434",
+    "descricao": "Operadoras de televisão por assinatura por satélite",
+    "codigo_formatado": "61.43-4"
+  },
+  {
+    "codigo": "61906",
+    "descricao": "Outras atividades de telecomunicações",
+    "codigo_formatado": "61.90-6"
+  },
+  {
+    "codigo": "62015",
+    "descricao": "Desenvolvimento de programas de computador sob encomenda",
+    "codigo_formatado": "62.01-5"
+  },
+  {
+    "codigo": "62023",
+    "descricao": "Desenvolvimento e licenciamento de programas de computador customizáveis",
+    "codigo_formatado": "62.02-3"
+  },
+  {
+    "codigo": "62031",
+    "descricao": "Desenvolvimento e licenciamento de programas de computador não-customizáveis",
+    "codigo_formatado": "62.03-1"
+  },
+  {
+    "codigo": "62040",
+    "descricao": "Consultoria em tecnologia da informação",
+    "codigo_formatado": "62.04-0"
+  },
+  {
+    "codigo": "62091",
+    "descricao": "Suporte técnico, manutenção e outros serviços em tecnologia da informação",
+    "codigo_formatado": "62.09-1"
+  },
+  {
+    "codigo": "63119",
+    "descricao": "Tratamento de dados, provedores de serviços de aplicação e serviços de hospedagem na internet",
+    "codigo_formatado": "63.11-9"
+  },
+  {
+    "codigo": "63194",
+    "descricao": "Portais, provedores de conteúdo e outros serviços de informação na internet",
+    "codigo_formatado": "63.19-4"
+  },
+  {
+    "codigo": "63917",
+    "descricao": "Agências de notícias",
+    "codigo_formatado": "63.91-7"
+  },
+  {
+    "codigo": "63992",
+    "descricao": "Outras atividades de prestação de serviços de informação não especificadas anteriormente",
+    "codigo_formatado": "63.99-2"
+  },
+  {
+    "codigo": "64107",
+    "descricao": "Banco Central",
+    "codigo_formatado": "64.10-7"
+  },
+  {
+    "codigo": "64212",
+    "descricao": "Bancos comerciais",
+    "codigo_formatado": "64.21-2"
+  },
+  {
+    "codigo": "64221",
+    "descricao": "Bancos múltiplos, com carteira comercial",
+    "codigo_formatado": "64.22-1"
+  },
+  {
+    "codigo": "Classe",
+    "descricao": "Denominação",
+    "codigo_formatado": "Classe"
+  },
+  {
+    "codigo": "64239",
+    "descricao": "Caixas econômicas",
+    "codigo_formatado": "64.23-9"
+  },
+  {
+    "codigo": "64247",
+    "descricao": "Crédito cooperativo",
+    "codigo_formatado": "64.24-7"
+  },
+  {
+    "codigo": "64310",
+    "descricao": "Bancos múltiplos, sem carteira comercial",
+    "codigo_formatado": "64.31-0"
+  },
+  {
+    "codigo": "64328",
+    "descricao": "Bancos de investimento",
+    "codigo_formatado": "64.32-8"
+  },
+  {
+    "codigo": "64336",
+    "descricao": "Bancos de desenvolvimento",
+    "codigo_formatado": "64.33-6"
+  },
+  {
+    "codigo": "64344",
+    "descricao": "Agências de fomento",
+    "codigo_formatado": "64.34-4"
+  },
+  {
+    "codigo": "64352",
+    "descricao": "Crédito imobiliário",
+    "codigo_formatado": "64.35-2"
+  },
+  {
+    "codigo": "64361",
+    "descricao": "Sociedades de crédito, financiamento e investimento - financeiras",
+    "codigo_formatado": "64.36-1"
+  },
+  {
+    "codigo": "64379",
+    "descricao": "Sociedades de crédito ao microempreendedor",
+    "codigo_formatado": "64.37-9"
+  },
+  {
+    "codigo": "64387",
+    "descricao": "Bancos de câmbio e outras instituições de intermediação não-monetária",
+    "codigo_formatado": "64.38-7"
+  },
+  {
+    "codigo": "64409",
+    "descricao": "Arrendamento mercantil",
+    "codigo_formatado": "64.40-9"
+  },
+  {
+    "codigo": "64506",
+    "descricao": "Sociedades de capitalização",
+    "codigo_formatado": "64.50-6"
+  },
+  {
+    "codigo": "64611",
+    "descricao": "Holdings de instituições financeiras",
+    "codigo_formatado": "64.61-1"
+  },
+  {
+    "codigo": "64620",
+    "descricao": "Holdings de instituições não-financeiras",
+    "codigo_formatado": "64.62-0"
+  },
+  {
+    "codigo": "64638",
+    "descricao": "Outras sociedades de participação, exceto holdings",
+    "codigo_formatado": "64.63-8"
+  },
+  {
+    "codigo": "64701",
+    "descricao": "Fundos de investimento",
+    "codigo_formatado": "64.70-1"
+  },
+  {
+    "codigo": "64913",
+    "descricao": "Sociedades de fomento mercantil - factoring",
+    "codigo_formatado": "64.91-3"
+  },
+  {
+    "codigo": "64921",
+    "descricao": "Securitização de créditos",
+    "codigo_formatado": "64.92-1"
+  },
+  {
+    "codigo": "64930",
+    "descricao": "Administração de consórcios para aquisição de bens e direitos",
+    "codigo_formatado": "64.93-0"
+  },
+  {
+    "codigo": "64999",
+    "descricao": "Outras atividades de serviços financeiros não especificadas anteriormente",
+    "codigo_formatado": "64.99-9"
+  },
+  {
+    "codigo": "65111",
+    "descricao": "Seguros de vida",
+    "codigo_formatado": "65.11-1"
+  },
+  {
+    "codigo": "65120",
+    "descricao": "Seguros não-vida",
+    "codigo_formatado": "65.12-0"
+  },
+  {
+    "codigo": "65201",
+    "descricao": "Seguros-saúde",
+    "codigo_formatado": "65.20-1"
+  },
+  {
+    "codigo": "65308",
+    "descricao": "Resseguros",
+    "codigo_formatado": "65.30-8"
+  },
+  {
+    "codigo": "65413",
+    "descricao": "Previdência complementar fechada",
+    "codigo_formatado": "65.41-3"
+  },
+  {
+    "codigo": "65421",
+    "descricao": "Previdência complementar aberta",
+    "codigo_formatado": "65.42-1"
+  },
+  {
+    "codigo": "65502",
+    "descricao": "Planos de saúde",
+    "codigo_formatado": "65.50-2"
+  },
+  {
+    "codigo": "66118",
+    "descricao": "Administração de bolsas e mercados de balcão organizados",
+    "codigo_formatado": "66.11-8"
+  },
+  {
+    "codigo": "Classe",
+    "descricao": "Denominação",
+    "codigo_formatado": "Classe"
+  },
+  {
+    "codigo": "66126",
+    "descricao": "Atividades de intermediários em transações de títulos, valores mobiliários e mercadorias",
+    "codigo_formatado": "66.12-6"
+  },
+  {
+    "codigo": "66134",
+    "descricao": "Administração de cartões de crédito",
+    "codigo_formatado": "66.13-4"
+  },
+  {
+    "codigo": "66193",
+    "descricao": "Atividades auxiliares dos serviços financeiros não especificadas anteriormente",
+    "codigo_formatado": "66.19-3"
+  },
+  {
+    "codigo": "66215",
+    "descricao": "Avaliação de riscos e perdas",
+    "codigo_formatado": "66.21-5"
+  },
+  {
+    "codigo": "66223",
+    "descricao": "Corretores e agentes de seguros, de planos de previdência complementar e de saúde",
+    "codigo_formatado": "66.22-3"
+  },
+  {
+    "codigo": "66291",
+    "descricao": "Atividades auxiliares dos seguros, da previdência complementar e dos planos de saúde não especificadas anteriormente",
+    "codigo_formatado": "66.29-1"
+  },
+  {
+    "codigo": "66304",
+    "descricao": "Atividades de administração de fundos por contrato ou comissão",
+    "codigo_formatado": "66.30-4"
+  },
+  {
+    "codigo": "68102",
+    "descricao": "Atividades imobiliárias de imóveis próprios",
+    "codigo_formatado": "68.10-2"
+  },
+  {
+    "codigo": "68218",
+    "descricao": "Intermediação na compra, venda e aluguel de imóveis",
+    "codigo_formatado": "68.21-8"
+  },
+  {
+    "codigo": "68226",
+    "descricao": "Gestão e administração da propriedade imobiliária",
+    "codigo_formatado": "68.22-6"
+  },
+  {
+    "codigo": "69117",
+    "descricao": "Atividades jurídicas, exceto cartórios",
+    "codigo_formatado": "69.11-7"
+  },
+  {
+    "codigo": "69125",
+    "descricao": "Cartórios",
+    "codigo_formatado": "69.12-5"
+  },
+  {
+    "codigo": "69206",
+    "descricao": "Atividades de contabilidade, consultoria e auditoria contábil e tributária",
+    "codigo_formatado": "69.20-6"
+  },
+  {
+    "codigo": "70107",
+    "descricao": "Sedes de empresas e unidades administrativas locais",
+    "codigo_formatado": "70.10-7"
+  },
+  {
+    "codigo": "70204",
+    "descricao": "Atividades de consultoria em gestão empresarial",
+    "codigo_formatado": "70.20-4"
+  },
+  {
+    "codigo": "71111",
+    "descricao": "Serviços de arquitetura",
+    "codigo_formatado": "71.11-1"
+  },
+  {
+    "codigo": "71120",
+    "descricao": "Serviços de engenharia",
+    "codigo_formatado": "71.12-0"
+  },
+  {
+    "codigo": "71197",
+    "descricao": "Atividades técnicas relacionadas à arquitetura e engenharia",
+    "codigo_formatado": "71.19-7"
+  },
+  {
+    "codigo": "71201",
+    "descricao": "Testes e análises técnicas",
+    "codigo_formatado": "71.20-1"
+  },
+  {
+    "codigo": "72100",
+    "descricao": "Pesquisa e desenvolvimento experimental em ciências físicas e naturais",
+    "codigo_formatado": "72.10-0"
+  },
+  {
+    "codigo": "72207",
+    "descricao": "Pesquisa e desenvolvimento experimental em ciências sociais e humanas",
+    "codigo_formatado": "72.20-7"
+  },
+  {
+    "codigo": "Classe",
+    "descricao": "Denominação",
+    "codigo_formatado": "Classe"
+  },
+  {
+    "codigo": "73114",
+    "descricao": "Agências de publicidade",
+    "codigo_formatado": "73.11-4"
+  },
+  {
+    "codigo": "73122",
+    "descricao": "Agenciamento de espaços para publicidade, exceto em veículos de comunicação",
+    "codigo_formatado": "73.12-2"
+  },
+  {
+    "codigo": "73190",
+    "descricao": "Atividades de publicidade não especificadas anteriormente",
+    "codigo_formatado": "73.19-0"
+  },
+  {
+    "codigo": "73203",
+    "descricao": "Pesquisas de mercado e de opinião pública",
+    "codigo_formatado": "73.20-3"
+  },
+  {
+    "codigo": "74102",
+    "descricao": "Design e decoração de interiores",
+    "codigo_formatado": "74.10-2"
+  },
+  {
+    "codigo": "74200",
+    "descricao": "Atividades fotográficas e similares",
+    "codigo_formatado": "74.20-0"
+  },
+  {
+    "codigo": "74901",
+    "descricao": "Atividades profissionais, científicas e técnicas não especificadas anteriormente",
+    "codigo_formatado": "74.90-1"
+  },
+  {
+    "codigo": "75001",
+    "descricao": "Atividades veterinárias",
+    "codigo_formatado": "75.00-1"
+  },
+  {
+    "codigo": "77110",
+    "descricao": "Locação de automóveis sem condutor",
+    "codigo_formatado": "77.11-0"
+  },
+  {
+    "codigo": "77195",
+    "descricao": "Locação de meios de transporte, exceto automóveis, sem condutor",
+    "codigo_formatado": "77.19-5"
+  },
+  {
+    "codigo": "77217",
+    "descricao": "Aluguel de equipamentos recreativos e esportivos",
+    "codigo_formatado": "77.21-7"
+  },
+  {
+    "codigo": "77225",
+    "descricao": "Aluguel de fitas de vídeo, DVDs e similares",
+    "codigo_formatado": "77.22-5"
+  },
+  {
+    "codigo": "77233",
+    "descricao": "Aluguel de objetos do vestuário, jóias e acessórios",
+    "codigo_formatado": "77.23-3"
+  },
+  {
+    "codigo": "77292",
+    "descricao": "Aluguel de objetos pessoais e domésticos não especificados anteriormente",
+    "codigo_formatado": "77.29-2"
+  },
+  {
+    "codigo": "77314",
+    "descricao": "Aluguel de máquinas e equipamentos agrícolas sem operador",
+    "codigo_formatado": "77.31-4"
+  },
+  {
+    "codigo": "77322",
+    "descricao": "Aluguel de máquinas e equipamentos para construção sem operador",
+    "codigo_formatado": "77.32-2"
+  },
+  {
+    "codigo": "77331",
+    "descricao": "Aluguel de máquinas e equipamentos para escritório",
+    "codigo_formatado": "77.33-1"
+  },
+  {
+    "codigo": "77390",
+    "descricao": "Aluguel de máquinas e equipamentos não especificados anteriormente",
+    "codigo_formatado": "77.39-0"
+  },
+  {
+    "codigo": "77403",
+    "descricao": "Gestão de ativos intangíveis não-financeiros",
+    "codigo_formatado": "77.40-3"
+  },
+  {
+    "codigo": "78108",
+    "descricao": "Seleção e agenciamento de mão-de-obra",
+    "codigo_formatado": "78.10-8"
+  },
+  {
+    "codigo": "78205",
+    "descricao": "Locação de mão-de-obra temporária",
+    "codigo_formatado": "78.20-5"
+  },
+  {
+    "codigo": "78302",
+    "descricao": "Fornecimento e gestão de recursos humanos para terceiros",
+    "codigo_formatado": "78.30-2"
+  },
+  {
+    "codigo": "Classe",
+    "descricao": "Denominação",
+    "codigo_formatado": "Classe"
+  },
+  {
+    "codigo": "79112",
+    "descricao": "Agências de viagens",
+    "codigo_formatado": "79.11-2"
+  },
+  {
+    "codigo": "79121",
+    "descricao": "Operadores turísticos",
+    "codigo_formatado": "79.12-1"
+  },
+  {
+    "codigo": "79902",
+    "descricao": "Serviços de reservas e outros serviços de turismo não especificados anteriormente",
+    "codigo_formatado": "79.90-2"
+  },
+  {
+    "codigo": "80111",
+    "descricao": "Atividades de vigilância e segurança privada",
+    "codigo_formatado": "80.11-1"
+  },
+  {
+    "codigo": "80129",
+    "descricao": "Atividades de transporte de valores",
+    "codigo_formatado": "80.12-9"
+  },
+  {
+    "codigo": "80200",
+    "descricao": "Atividades de monitoramento de sistemas de segurança",
+    "codigo_formatado": "80.20-0"
+  },
+  {
+    "codigo": "80307",
+    "descricao": "Atividades de investigação particular",
+    "codigo_formatado": "80.30-7"
+  },
+  {
+    "codigo": "81117",
+    "descricao": "Serviços combinados para apoio a edifícios, exceto condomínios prediais",
+    "codigo_formatado": "81.11-7"
+  },
+  {
+    "codigo": "81125",
+    "descricao": "Condomínios prediais",
+    "codigo_formatado": "81.12-5"
+  },
+  {
+    "codigo": "81214",
+    "descricao": "Limpeza em prédios e em domicílios",
+    "codigo_formatado": "81.21-4"
+  },
+  {
+    "codigo": "81222",
+    "descricao": "Imunização e controle de pragas urbanas",
+    "codigo_formatado": "81.22-2"
+  },
+  {
+    "codigo": "81290",
+    "descricao": "Atividades de limpeza não especificadas anteriormente",
+    "codigo_formatado": "81.29-0"
+  },
+  {
+    "codigo": "81303",
+    "descricao": "Atividades paisagísticas",
+    "codigo_formatado": "81.30-3"
+  },
+  {
+    "codigo": "82113",
+    "descricao": "Serviços combinados de escritório e apoio administrativo",
+    "codigo_formatado": "82.11-3"
+  },
+  {
+    "codigo": "82199",
+    "descricao": "Fotocópias, preparação de documentos e outros serviços especializados de apoio administrativo",
+    "codigo_formatado": "82.19-9"
+  },
+  {
+    "codigo": "82202",
+    "descricao": "Atividades de teleatendimento",
+    "codigo_formatado": "82.20-2"
+  },
+  {
+    "codigo": "82300",
+    "descricao": "Atividades de organização de eventos, exceto culturais e esportivos",
+    "codigo_formatado": "82.30-0"
+  },
+  {
+    "codigo": "82911",
+    "descricao": "Atividades de cobrança e informações cadastrais",
+    "codigo_formatado": "82.91-1"
+  },
+  {
+    "codigo": "82920",
+    "descricao": "Envasamento e empacotamento sob contrato",
+    "codigo_formatado": "82.92-0"
+  },
+  {
+    "codigo": "82997",
+    "descricao": "Atividades de serviços prestados principalmente às empresas não especificadas anteriormente",
+    "codigo_formatado": "82.99-7"
+  },
+  {
+    "codigo": "Classe",
+    "descricao": "Denominação",
+    "codigo_formatado": "Classe"
+  },
+  {
+    "codigo": "84116",
+    "descricao": "Administração pública em geral",
+    "codigo_formatado": "84.11-6"
+  },
+  {
+    "codigo": "84124",
+    "descricao": "Regulação das atividades de saúde, educação, serviços culturais e outros serviços sociais",
+    "codigo_formatado": "84.12-4"
+  },
+  {
+    "codigo": "84132",
+    "descricao": "Regulação das atividades econômicas",
+    "codigo_formatado": "84.13-2"
+  },
+  {
+    "codigo": "84213",
+    "descricao": "Relações exteriores",
+    "codigo_formatado": "84.21-3"
+  },
+  {
+    "codigo": "84221",
+    "descricao": "Defesa",
+    "codigo_formatado": "84.22-1"
+  },
+  {
+    "codigo": "84230",
+    "descricao": "Justiça",
+    "codigo_formatado": "84.23-0"
+  },
+  {
+    "codigo": "84248",
+    "descricao": "Segurança e ordem pública",
+    "codigo_formatado": "84.24-8"
+  },
+  {
+    "codigo": "84256",
+    "descricao": "Defesa Civil",
+    "codigo_formatado": "84.25-6"
+  },
+  {
+    "codigo": "84302",
+    "descricao": "Seguridade social obrigatória",
+    "codigo_formatado": "84.30-2"
+  },
+  {
+    "codigo": "85112",
+    "descricao": "Educação infantil - creche",
+    "codigo_formatado": "85.11-2"
+  },
+  {
+    "codigo": "85121",
+    "descricao": "Educação infantil - pré-escola",
+    "codigo_formatado": "85.12-1"
+  },
+  {
+    "codigo": "85139",
+    "descricao": "Ensino fundamental",
+    "codigo_formatado": "85.13-9"
+  },
+  {
+    "codigo": "85201",
+    "descricao": "Ensino médio",
+    "codigo_formatado": "85.20-1"
+  },
+  {
+    "codigo": "85317",
+    "descricao": "Educação superior - graduação",
+    "codigo_formatado": "85.31-7"
+  },
+  {
+    "codigo": "85325",
+    "descricao": "Educação superior - graduação e pós-graduação",
+    "codigo_formatado": "85.32-5"
+  },
+  {
+    "codigo": "85333",
+    "descricao": "Educação superior - pós-graduação e extensão",
+    "codigo_formatado": "85.33-3"
+  },
+  {
+    "codigo": "85414",
+    "descricao": "Educação profissional de nível técnico",
+    "codigo_formatado": "85.41-4"
+  },
+  {
+    "codigo": "85422",
+    "descricao": "Educação profissional de nível tecnológico",
+    "codigo_formatado": "85.42-2"
+  },
+  {
+    "codigo": "85503",
+    "descricao": "Atividades de apoio à educação",
+    "codigo_formatado": "85.50-3"
+  },
+  {
+    "codigo": "85911",
+    "descricao": "Ensino de esportes",
+    "codigo_formatado": "85.91-1"
+  },
+  {
+    "codigo": "85929",
+    "descricao": "Ensino de arte e cultura",
+    "codigo_formatado": "85.92-9"
+  },
+  {
+    "codigo": "85937",
+    "descricao": "Ensino de idiomas",
+    "codigo_formatado": "85.93-7"
+  },
+  {
+    "codigo": "85996",
+    "descricao": "Atividades de ensino não especificadas anteriormente",
+    "codigo_formatado": "85.99-6"
+  },
+  {
+    "codigo": "86101",
+    "descricao": "Atividades de atendimento hospitalar",
+    "codigo_formatado": "86.10-1"
+  },
+  {
+    "codigo": "86216",
+    "descricao": "Serviços móveis de atendimento a urgências",
+    "codigo_formatado": "86.21-6"
+  },
+  {
+    "codigo": "86224",
+    "descricao": "Serviços de remoção de pacientes, exceto os serviços móveis de atendimento a urgências",
+    "codigo_formatado": "86.22-4"
+  },
+  {
+    "codigo": "86305",
+    "descricao": "Atividades de atenção ambulatorial executadas por médicos e odontólogos",
+    "codigo_formatado": "86.30-5"
+  },
+  {
+    "codigo": "Classe",
+    "descricao": "Denominação",
+    "codigo_formatado": "Classe"
+  },
+  {
+    "codigo": "86402",
+    "descricao": "Atividades de serviços de complementação diagnóstica e terapêutica",
+    "codigo_formatado": "86.40-2"
+  },
+  {
+    "codigo": "86500",
+    "descricao": "Atividades de profissionais da área de saúde, exceto médicos e odontólogos",
+    "codigo_formatado": "86.50-0"
+  },
+  {
+    "codigo": "86607",
+    "descricao": "Atividades de apoio à gestão de saúde",
+    "codigo_formatado": "86.60-7"
+  },
+  {
+    "codigo": "86909",
+    "descricao": "Atividades de atenção à saúde humana não especificadas anteriormente",
+    "codigo_formatado": "86.90-9"
+  },
+  {
+    "codigo": "87115",
+    "descricao": "Atividades de assistência a idosos, deficientes físicos, imunodeprimidos e convalescentes prestadas em residências coletivas e particulares",
+    "codigo_formatado": "87.11-5"
+  },
+  {
+    "codigo": "87123",
+    "descricao": "Atividades de fornecimento de infra-estrutura de apoio e assistência a paciente no domicílio",
+    "codigo_formatado": "87.12-3"
+  },
+  {
+    "codigo": "87204",
+    "descricao": "Atividades de assistência psicossocial e à saúde a portadores de distúrbios psíquicos, deficiência mental e dependência química",
+    "codigo_formatado": "87.20-4"
+  },
+  {
+    "codigo": "87301",
+    "descricao": "Atividades de assistência social prestadas em residências coletivas e particulares",
+    "codigo_formatado": "87.30-1"
+  },
+  {
+    "codigo": "88006",
+    "descricao": "Serviços de assistência social sem alojamento",
+    "codigo_formatado": "88.00-6"
+  },
+  {
+    "codigo": "90019",
+    "descricao": "Artes cênicas, espetáculos e atividades complementares",
+    "codigo_formatado": "90.01-9"
+  },
+  {
+    "codigo": "90027",
+    "descricao": "Criação artística",
+    "codigo_formatado": "90.02-7"
+  },
+  {
+    "codigo": "90035",
+    "descricao": "Gestão de espaços para artes cênicas, espetáculos e outras atividades artísticas",
+    "codigo_formatado": "90.03-5"
+  },
+  {
+    "codigo": "91015",
+    "descricao": "Atividades de bibliotecas e arquivos",
+    "codigo_formatado": "91.01-5"
+  },
+  {
+    "codigo": "91023",
+    "descricao": "Atividades de museus e de exploração, restauração artística e conservação de lugares e prédios históricos e atrações similares",
+    "codigo_formatado": "91.02-3"
+  },
+  {
+    "codigo": "91031",
+    "descricao": "Atividades de jardins botânicos, zoológicos, parques nacionais, reservas ecológicas e áreas de proteção ambiental",
+    "codigo_formatado": "91.03-1"
+  },
+  {
+    "codigo": "92003",
+    "descricao": "Atividades de exploração de jogos de azar e apostas",
+    "codigo_formatado": "92.00-3"
+  },
+  {
+    "codigo": "93115",
+    "descricao": "Gestão de instalações de esportes",
+    "codigo_formatado": "93.11-5"
+  },
+  {
+    "codigo": "93123",
+    "descricao": "Clubes sociais, esportivos e similares",
+    "codigo_formatado": "93.12-3"
+  },
+  {
+    "codigo": "Classe",
+    "descricao": "Denominação",
+    "codigo_formatado": "Classe"
+  },
+  {
+    "codigo": "93131",
+    "descricao": "Atividades de condicionamento físico",
+    "codigo_formatado": "93.13-1"
+  },
+  {
+    "codigo": "93191",
+    "descricao": "Atividades esportivas não especificadas anteriormente",
+    "codigo_formatado": "93.19-1"
+  },
+  {
+    "codigo": "93212",
+    "descricao": "Parques de diversão e parques temáticos",
+    "codigo_formatado": "93.21-2"
+  },
+  {
+    "codigo": "93298",
+    "descricao": "Atividades de recreação e lazer não especificadas anteriormente",
+    "codigo_formatado": "93.29-8"
+  },
+  {
+    "codigo": "94111",
+    "descricao": "Atividades de organizações associativas patronais e empresariais",
+    "codigo_formatado": "94.11-1"
+  },
+  {
+    "codigo": "94120",
+    "descricao": "Atividades de organizações associativas profissionais",
+    "codigo_formatado": "94.12-0"
+  },
+  {
+    "codigo": "94201",
+    "descricao": "Atividades de organizações sindicais",
+    "codigo_formatado": "94.20-1"
+  },
+  {
+    "codigo": "94308",
+    "descricao": "Atividades de associações de defesa de direitos sociais",
+    "codigo_formatado": "94.30-8"
+  },
+  {
+    "codigo": "94910",
+    "descricao": "Atividades de organizações religiosas",
+    "codigo_formatado": "94.91-0"
+  },
+  {
+    "codigo": "94928",
+    "descricao": "Atividades de organizações políticas",
+    "codigo_formatado": "94.92-8"
+  },
+  {
+    "codigo": "94936",
+    "descricao": "Atividades de organizações associativas ligadas à cultura e à arte",
+    "codigo_formatado": "94.93-6"
+  },
+  {
+    "codigo": "94995",
+    "descricao": "Atividades associativas não especificadas anteriormente",
+    "codigo_formatado": "94.99-5"
+  },
+  {
+    "codigo": "95118",
+    "descricao": "Reparação e manutenção de computadores e de equipamentos periféricos",
+    "codigo_formatado": "95.11-8"
+  },
+  {
+    "codigo": "95126",
+    "descricao": "Reparação e manutenção de equipamentos de comunicação",
+    "codigo_formatado": "95.12-6"
+  },
+  {
+    "codigo": "95215",
+    "descricao": "Reparação e manutenção de equipamentos eletroeletrônicos de uso pessoal e doméstico",
+    "codigo_formatado": "95.21-5"
+  },
+  {
+    "codigo": "95291",
+    "descricao": "Reparação e manutenção de objetos e equipamentos pessoais e domésticos não especificados anteriormente",
+    "codigo_formatado": "95.29-1"
+  },
+  {
+    "codigo": "96017",
+    "descricao": "Lavanderias, tinturarias e toalheiros",
+    "codigo_formatado": "96.01-7"
+  },
+  {
+    "codigo": "96025",
+    "descricao": "Cabeleireiros e outras atividades de tratamento de beleza",
+    "codigo_formatado": "96.02-5"
+  },
+  {
+    "codigo": "96033",
+    "descricao": "Atividades funerárias e serviços relacionados",
+    "codigo_formatado": "96.03-3"
+  },
+  {
+    "codigo": "96092",
+    "descricao": "Atividades de serviços pessoais não especificadas anteriormente",
+    "codigo_formatado": "96.09-2"
+  },
+  {
+    "codigo": "97005",
+    "descricao": "Serviços domésticos",
+    "codigo_formatado": "97.00-5"
+  },
+  {
+    "codigo": "99008",
+    "descricao": "Organismos internacionais e outras instituições extraterritoriais",
+    "codigo_formatado": "99.00-8"
+  }
+]

@@ -7,10 +7,11 @@ type DiscoveryProvider interface {
 	Name() string
 }
 
-// QueryEnricher translates a raw user query into structured search context.
-type QueryEnricher interface {
+// CNAEEnricher translates a raw user query into CNAE-based search context.
+// It uses listacnae.com.br (cached in MongoDB) to find the best matching CNAE code.
+type CNAEEnricher interface {
 	DiscoveryProvider
-	Enrich(ctx context.Context, query, location string) (*GeminiSearchContext, error)
+	FindCNAE(ctx context.Context, query string) (*SearchContext, error)
 }
 
 // CNPJSearcher finds CNPJ records that match a search context.
@@ -46,6 +47,15 @@ type SearchResult struct {
 	Title   string
 	URL     string
 	Snippet string
+}
+
+// CNPJNameSearcher looks up a CNPJ by company name and city.
+// It goes directly to a CNPJ database, bypassing web-search rate limits.
+type CNPJNameSearcher interface {
+	DiscoveryProvider
+	// SearchByName returns the 14-digit CNPJ string for the best matching company,
+	// or ("", nil) when not found, or an error on provider failure.
+	SearchByName(ctx context.Context, name, city string) (string, error)
 }
 
 // BusinessDiscoverer discovers raw business names from web data sources

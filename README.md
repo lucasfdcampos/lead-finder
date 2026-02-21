@@ -93,7 +93,30 @@ make docker-run
 | Variável | Obrigatória | Descrição |
 |----------|-------------|-----------|
 | `GEMINI_API_KEY` | ✅ | Chave da Google AI Studio |
+| `GOOGLE_SEARCH_API_KEY` | ⭐ Recomendado | Google Cloud API key com "Custom Search API" habilitada (100 req/dia grátis) |
+| `GOOGLE_CX` | ⭐ Recomendado | ID do Programmable Search Engine (veja setup abaixo) |
+| `SERPAPI_KEY` | ❌ | Chave do SerpAPI (100 req/mês grátis) — fallback se Google CSE não configurado |
+| `BING_API_KEY` | ❌ | Chave RapidAPI do Bing Web Search — fallback se nenhum dos acima configurado |
+| `FOURSQUARE_API_KEY` | ❌ | Chave do Foursquare Places API v3 (grátis) |
+| `LOCATIONIQ_API_KEY` | ❌ | Chave do LocationIQ para geocoding |
 | `PORT` | ❌ | Porta HTTP (padrão: `8080`) |
+
+### Prioridade do Web Searcher
+
+O pipeline usa o primeiro provider disponível:
+```
+Google Custom Search > SerpAPI > Bing (RapidAPI) > DuckDuckGo (fallback, pode ser bloqueado)
+```
+
+### Setup do Google Custom Search (recomendado)
+
+1. Acesse [programmablesearchengine.google.com](https://programmablesearchengine.google.com/)
+2. Crie um novo Search Engine → marque **"Search the entire web"**
+3. Copie o **CX ID** → `GOOGLE_CX`
+4. No [Google Cloud Console](https://console.cloud.google.com/), habilite a **Custom Search API**
+5. Crie ou use uma API key existente → `GOOGLE_SEARCH_API_KEY`
+   - A mesma key do Gemini pode ser usada se estiver no mesmo projeto
+
 
 ## Heurística de Instagram — `GenerateHandleVariations`
 

@@ -5,6 +5,7 @@ package domain
 type SearchRequest struct {
 	Query           string `json:"query"`
 	Location        string `json:"location"`
+	Limit           int    `json:"limit"` // max leads to return (0 = no limit, returns all discovered)
 	SearchWhatsApp  bool   `json:"search_whatsapp"`
 	SearchCNPJ      bool   `json:"search_cnpj"`
 	SearchInstagram bool   `json:"search_instagram"`
@@ -49,8 +50,8 @@ type Partner struct {
 	Qualification string `json:"qualification,omitempty"`
 }
 
-// GeminiSearchContext is the structured output from Gemini for query enrichment.
-type GeminiSearchContext struct {
+// SearchContext is the structured output from CNAE enrichment for a user query.
+type SearchContext struct {
 	CNAE            string   `json:"cnae"`
 	CNAEDescription string   `json:"cnae_description"`
 	SearchTerms     []string `json:"search_terms"`
